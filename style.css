@@ -1,0 +1,285 @@
+@import url("https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800&family=Ubuntu:wght@400;500;700&display=swap");
+
+@font-face {
+  font-family: "Ceria Lebaran";
+  src: url(./font/Ceria\ Lebaran.otf);
+}
+
+:root {
+  --background: #d9501c;
+  --background-2nd: #e17349;
+  --background-3rd: #bc603b;
+  --button-accents: #ffe600;
+  --primary-text: #281203;
+  --secondary-text: #211e00;
+  --primary-font: "Ceria Lebaran";
+  --secondary-font: "Inknut Antiqua";
+  --white: #ffffff;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: var(--secondary-font);
+}
+
+body {
+  background: var(--background) !important;
+}
+
+/* hero */
+
+#hero {
+  position: relative;
+}
+
+.hero-bg .hero-bg-1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  pointer-events: none;
+  z-index: -999;
+}
+
+.navbars {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+}
+
+.navbars ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin-bottom: 0;
+}
+
+.navbars ul li {
+  margin-left: 20px;
+}
+
+.navbars ul li img {
+  width: 40px;
+}
+
+.navbars ul .switch {
+  position: relative;
+  width: 100px;
+  height: 32px;
+  font-size: 13px;
+  border-radius: 6px;
+}
+
+.navbars ul .switch input {
+  appearance: none;
+  width: 100px;
+  height: 32px;
+  outline: none;
+  border-radius: 6px;
+  border: 1px solid var(--white);
+}
+
+.switch input::before,
+.switch input::after {
+  z-index: 2;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.switch input::before {
+  content: "ENG";
+  left: 8px;
+}
+
+.switch input::after {
+  content: "AR";
+  right: 8px;
+}
+
+.switch label {
+  z-index: 1;
+  position: absolute;
+  top: 3px;
+  bottom: 3px;
+  border-radius: 6px;
+}
+
+.switch input {
+  transition: 0.25s;
+}
+
+.switch input:checked::after,
+.switch input:checked::before {
+  color: var(--white);
+  transition: color 0.5s;
+}
+
+.switch input:checked::before {
+  color: var(--secondary-text);
+  transition: color 0.5s;
+}
+
+.switch input:checked + label {
+  left: 3px;
+  right: 50px;
+  background: var(--button-accents);
+  transition: left 0.5s, right 0.4s 0.2s;
+}
+
+.switch input:not(:checked)::before {
+  color: var(--white);
+  transition: color 0.5s;
+}
+
+.switch input:not(:checked)::after {
+  color: var(--secondary-text);
+  transition: color 0.5s 0.2s;
+}
+
+.switch input:not(:checked) + label {
+  left: 60px;
+  right: 3px;
+  background-color: var(--button-accents);
+  transition: left 0.5s, right 0.4s 0.2s;
+}
+
+.logo {
+  z-index: 9999 !important;
+}
+
+.hero-bg-2 {
+  position: absolute;
+  top: 200px;
+  left: 0;
+  width: 100%;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.moon {
+  position: absolute;
+  top: 35%;
+  left: 18%;
+  z-index: -1;
+}
+
+.moon img {
+  width: 80%;
+}
+
+.hero-text {
+  height: 80vh;
+  padding-top: 50px;
+  text-align: center;
+  z-index: 9999 !important;
+}
+
+.hero-text h1 {
+  font-family: var(--primary-font);
+  color: var(--white);
+  font-size: 3em;
+}
+
+.hero-text p {
+  font-family: var(--secondary-font);
+  color: var(--white);
+  font-size: 1em;
+}
+
+.hero-btn {
+  margin: 40px 0;
+}
+
+.hero-btn a {
+  text-decoration: none;
+  color: var(--secondary-text);
+  padding: 6px 30px;
+  background: var(--button-accents);
+  box-shadow: 0px 10px 40px rgba(255, 230, 0, 0.5),
+    inset -4px -4px 12px rgba(0, 0, 0, 0.15),
+    inset 4px 4px 8px rgba(255, 255, 255, 0.5);
+  border-radius: 6px;
+}
+
+.hero-btn a:hover {
+  color: var(--secondary-text);
+}
+
+.hero-social-icons a {
+  text-decoration: none;
+}
+
+.hero-social-icons a img {
+  width: 45px;
+  margin: 0 10px;
+}
+
+@media screen and (max-width: 990px) {
+  .hero-text h1 {
+    font-size: 2.3em;
+  }
+
+  .hero-btn a {
+    padding: 3px 25px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hero-text h1 {
+    font-size: 1.8em;
+  }
+
+  .hero-btn a {
+    padding: 0 20px;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .hero-text h1 {
+    font-size: 1.5em;
+  }
+
+  .hero-btn a {
+    padding: 0 20px;
+  }
+}
+
+/* habibi gallery */
+
+.habibi-gallery.img-1 {
+  margin-top: 30px;
+}
+.habibi-gallery.img-2 {
+  margin-top: -30px;
+}
+.habibi-gallery.img-3 {
+  margin-top: 30px;
+}
+.habibi-gallery.img-4 {
+  margin-top: -30px;
+}
+.habibi-gallery.img-5 {
+  margin-top: 30px;
+}
+.habibi-gallery.img-6 {
+  margin-top: -30px;
+}
+.habibi-gallery.img-7 {
+  margin-top: 30px;
+}
+.habibi-gallery.img-8 {
+  margin-top: -30px;
+}
+
+.habibi-gallery img {
+  width: 100%;
+  height: auto;
+}
+
+/* habibi gallery */
+
+/* hero */
