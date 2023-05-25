@@ -183,6 +183,9 @@ body {
   color: var(--white);
   font-size: 3em;
 }
+.hero-text h1 span {
+  color: var(--button-accents);
+}
 
 .hero-text p {
   font-family: var(--secondary-font);
