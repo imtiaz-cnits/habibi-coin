@@ -39,6 +39,7 @@ body {
   top: 0;
   left: 0;
   width: 100%;
+  height: 80vh;
   pointer-events: none;
   z-index: -999;
 }
@@ -80,6 +81,7 @@ body {
   outline: none;
   border-radius: 6px;
   border: 1px solid var(--white);
+  cursor: pointer;
 }
 
 .switch input::before,
@@ -153,7 +155,7 @@ body {
 
 .hero-bg-2 {
   position: absolute;
-  top: 200px;
+  top: 350px;
   left: 0;
   width: 100%;
   pointer-events: none;
@@ -194,7 +196,7 @@ body {
 }
 
 .hero-btn {
-  margin: 40px 0;
+  margin: 70px 0 80px;
 }
 
 .hero-btn a {
@@ -214,14 +216,39 @@ body {
 
 .hero-social-icons a {
   text-decoration: none;
+  margin: 0 10px;
 }
 
 .hero-social-icons a img {
   width: 45px;
-  margin: 0 10px;
+  transition: 0.5s;
+}
+
+.hero-social-icons a img:hover {
+  transform: translateY(-10px);
+}
+
+@media screen and (max-width: 1400px) {
+  .hero-text {
+    height: 700px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .hero-text {
+    height: 600px;
+  }
+
+  .moon img {
+    width: 70%;
+  }
 }
 
 @media screen and (max-width: 990px) {
+  .hero-text {
+    height: 550px;
+  }
+
   .hero-text h1 {
     font-size: 2.3em;
   }
@@ -229,15 +256,45 @@ body {
   .hero-btn a {
     padding: 3px 25px;
   }
+
+  .moon {
+    top: 10%;
+  }
+
+  .moon img {
+    width: 60%;
+  }
 }
 
 @media screen and (max-width: 768px) {
+  .hero-text {
+    height: 480px;
+  }
+
   .hero-text h1 {
     font-size: 1.8em;
   }
 
   .hero-btn a {
+    font-size: 14px;
+    line-height: 10px;
     padding: 0 20px;
+  }
+
+  .moon {
+    top: 12%;
+  }
+
+  .moon img {
+    width: 50%;
+  }
+
+  .hero-btn {
+    margin: 40px 0 50px;
+  }
+
+  .hero-social-icons a {
+    margin: 0 6px;
   }
 }
 
@@ -249,9 +306,71 @@ body {
   .hero-btn a {
     padding: 0 20px;
   }
+
+  .navbars ul .switch {
+    width: 80px;
+    height: 30px;
+    font-size: 12px;
+  }
+  .navbars ul .switch input {
+    width: 80px;
+    height: 30px;
+  }
+
+  .switch input::before {
+    left: 5px;
+  }
+
+  .switch input::after {
+    right: 5px;
+  }
+
+  .switch input:checked + label {
+    left: 3px;
+    right: 40px;
+  }
+
+  .switch input:not(:checked) + label {
+    left: 50px;
+  }
+
+  .navbars ul li {
+    margin-left: 12px;
+  }
+
+  .navbars ul li img {
+    width: 35px;
+  }
+
+  .logo img {
+    width: 110px;
+  }
+
+  .moon {
+    top: 14%;
+  }
+
+  .moon img {
+    width: 40%;
+  }
 }
 
-/* habibi gallery */
+/* hero */
+
+/* habibi image gallery */
+
+/* #habibi-image-gallery {
+  background: url(./images/hero-desert-2.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+  padding: 50px;
+  position: relative;
+} */
+
+.habibi-gallery img {
+  z-index: -3;
+}
 
 .habibi-gallery.img-1 {
   margin-top: 30px;
@@ -280,9 +399,201 @@ body {
 
 .habibi-gallery img {
   width: 100%;
-  height: auto;
+  transition: 0.5s;
 }
 
-/* habibi gallery */
+.habibi-gallery img:hover {
+  transform: rotate(4deg) scale(1.1);
+  cursor: pointer;
+}
 
-/* hero */
+.habibi-token {
+  /* margin-bottom: 150px !important; */
+  position: absolute;
+  bottom: -35px;
+  transform: rotate(-3deg);
+  z-index: 999;
+  background-color: var(--button-accents);
+  overflow: hidden;
+}
+
+.habibi-token img {
+  margin: 0 30px;
+}
+
+/* habibi image gallery */
+
+/* about us */
+
+#about {
+  background: var(--background);
+  z-index: 100 !important;
+  padding: 150px 0;
+}
+
+.about-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 0 50px 0;
+}
+
+.about-header h4 {
+  margin-bottom: 0;
+  color: var(--button-accents);
+  font-family: var(--secondary-font);
+  font-size: 1.3em;
+}
+
+.about-header div {
+  width: 100px;
+  height: 2px;
+  border-radius: 30px;
+  background-color: var(--button-accents);
+  margin: 0 20px;
+}
+
+.about-text p {
+  color: var(--white);
+  font-family: var(--white);
+  font-size: 1.4em;
+  margin-bottom: 0;
+  text-align: center;
+  padding: 0 100px;
+}
+
+/* about us */
+
+/* feature */
+
+#feature {
+  position: relative;
+  height: 100%;
+  background-image: url(./images/habibi-feature.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-bottom: 100px;
+}
+
+.feature-image {
+  position: absolute;
+  z-index: -1;
+}
+
+/* .feature-image img {
+  width: 100%;
+} */
+
+#feature marquee {
+  position: absolute;
+  padding-top: 80px;
+}
+
+#feature marquee img {
+  margin: 0 150px;
+}
+
+.feature-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 300px 0 30px 0;
+}
+
+.dates-tree-img {
+  position: absolute;
+  top: -60px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.cactus-tree {
+  position: absolute;
+  right: 150px;
+  top: 50px;
+}
+
+.feature-header h4 {
+  margin-bottom: 0;
+  color: var(--button-accents);
+  font-family: var(--secondary-font);
+  font-size: 1.3em;
+}
+
+.feature-header div {
+  width: 100px;
+  height: 2px;
+  border-radius: 30px;
+  background-color: var(--button-accents);
+  margin: 0 20px;
+}
+
+.feature-header-content {
+  text-align: center;
+  font-family: var(--secondary-font);
+  color: var(--white);
+  font-size: 1.6em;
+  margin-bottom: 10px;
+}
+
+.feature-card {
+  position: relative;
+  background-color: rgba(40, 18, 3, 0.5);
+  border-width: 1px;
+  border-style: solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(
+    235deg,
+    #ffe600,
+    rgba(40, 18, 3, 0.5),
+    #ffe600
+  );
+  padding: 30px 20px 50px;
+  margin-top: 30px;
+}
+
+.feature-card .card-icon {
+  width: 50px;
+  height: 50px;
+  display: block;
+  margin: auto;
+}
+
+.feature-card h4 {
+  font-family: var(--secondary-font);
+  color: var(--button-accents);
+  font-size: 1.1em;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.feature-card p {
+  color: var(--white);
+  font-family: var(--secondary-font);
+  font-size: 14px;
+  text-align: center;
+}
+
+.card-image .card-bottom-image {
+  position: absolute;
+  bottom: 0;
+  width: 50px;
+}
+
+.card-image .card-bottom-image.img-1 {
+  left: 30px;
+}
+
+.card-image .card-bottom-image.img-2 {
+  right: 30px;
+}
+
+.card-image .card-bottom-image.img-3 {
+  left: 80px;
+}
+
+.card-image .card-bottom-image.img-2.cactus {
+  width: 30px;
+}
+
+/* feature */
