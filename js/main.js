@@ -1,11 +1,11 @@
 // parallax moon
 
-gsap.from("#img-1", {
-    scrollTrigger : {
-        scrub: true
-    },
-    y: -400,
-})
+// gsap.from("#img-1", {
+//     scrollTrigger : {
+//         scrub: true
+//     },
+//     y: -400,
+// })
 
 
 // accordion
@@ -48,11 +48,19 @@ new Chart(myChart, {
     },
     options: {
         borderRadius: 6,
+        // elements: {
+        //     arc: {
+        //         borderWidth: 0
+        //     }
+        // },
         elements: {
             arc: {
-                borderWidth: 0
-            }
+                borderWidth: 0,
+            },
         },
+        cutoutPercentage: 60,
+        responsive: true,
+        spacing: 20,
         plugins: {
             legend: {
                 display: false,
