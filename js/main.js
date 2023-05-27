@@ -1,11 +1,32 @@
 // parallax moon
 
-// gsap.from("#img-1", {
-//     scrollTrigger : {
-//         scrub: true
-//     },
-//     y: -400,
-// })
+gsap.from("#hero-moon", {
+    scrollTrigger : {
+        scrub: true
+    },
+    y: -700,
+})
+
+gsap.from("#feature-camels", {
+    scrollTrigger : {
+        scrub: true
+    },
+    x: -500,
+})
+
+gsap.from("#benefits-camels", {
+    scrollTrigger : {
+        scrub: true
+    },
+    x: 600,
+})
+
+gsap.from("#footer-moon", {
+    scrollTrigger : {
+        scrub: true
+    },
+    y: -5000,
+})
 
 
 // accordion
