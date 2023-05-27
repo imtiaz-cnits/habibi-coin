@@ -468,7 +468,7 @@ body {
 
 #feature {
   position: relative;
-  height: 100%;
+  height: 1150px;
   background-image: url(./images/habibi-feature.png);
   background-repeat: no-repeat;
   background-size: cover;
@@ -829,8 +829,17 @@ body {
   background-position: top center;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 80%;
+  height: 1000px;
   padding: 100px 0;
+}
+
+#benefits marquee {
+  position: absolute;
+  padding-top: -10px;
+}
+
+#benefits marquee img {
+  margin: 0 150px;
 }
 
 .benefits-title {
@@ -860,6 +869,7 @@ body {
   font-family: var(--secondary-font);
   color: var(--white);
   font-size: 1.6em;
+  margin-bottom: 50px;
 }
 
 .accordions {
@@ -904,15 +914,27 @@ body {
   height: 0;
   overflow: hidden;
   transition: 0.5s;
-  overflow-y: auto;
+  /* overflow-y: auto; */
   color: var(--white);
   border-radius: 6px;
   margin: 10px;
 }
 
 .accordions .contentBox.active .content {
-  height: 150px;
+  height: 120px;
   padding: 10px;
 }
 
 /* benefits */
+
+/* tockenomics */
+
+#tockenomics {
+  padding: 100px 0;
+}
+
+.chart-container {
+  width: 200px;
+}
+
+/* tockenomics */
