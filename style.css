@@ -269,13 +269,9 @@ body {
     padding: 3px 25px;
   }
 
-  /* .moon {
-    top: 10%;
-  }
-
   .moon img {
     width: 60%;
-  } */
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -293,13 +289,9 @@ body {
     padding: 0 20px;
   }
 
-  /* .moon {
-    top: 12%;
-  }
-
   .moon img {
     width: 50%;
-  } */
+  }
 
   .hero-btn {
     margin: 40px 0 50px;
@@ -376,13 +368,9 @@ body {
     margin-top: -230px;
   }
 
-  /* .moon {
-    top: 14%;
-  }
-
   .moon img {
     width: 40%;
-  } */
+  }
 }
 
 /* hero */
@@ -401,7 +389,6 @@ body {
   display: grid;
   grid-gap: 5px;
   grid-template-columns: auto auto auto auto auto;
-  /* margin: 20px; */
   padding: 50px;
 }
 
@@ -450,7 +437,6 @@ body {
   transform: rotate(-3deg);
   position: absolute;
   bottom: 0px;
-  padding: 10px;
 }
 
 .habibi-token img {
@@ -530,7 +516,7 @@ body {
 }
 
 .feature-camel-img {
-  /* padding-left: 500px; */
+  padding-left: 500px;
 }
 
 .feature-image {
@@ -661,9 +647,22 @@ body {
   width: 30px;
 }
 
+@media screen and (max-width: 1800px) {
+  .feature-camel-img img {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .feature-camel-img {
+    padding-top: 40px;
+  }
+}
+
 @media screen and (max-width: 990px) {
   #feature {
     padding: 0 0 100px;
+    background: none;
   }
 
   .feature-camel-img {
@@ -677,6 +676,7 @@ body {
 
 #roadmap {
   padding: 100px 0 150px;
+  position: relative;
 }
 
 .roadmap-title {
@@ -706,6 +706,17 @@ body {
   font-family: var(--secondary-font);
   color: var(--white);
   font-size: 1.6em;
+}
+
+.roadmap-lesso-img {
+  position: absolute;
+  bottom: 10%;
+  left: 35%;
+}
+
+.roadmap-lesso-img img {
+  width: 100%;
+  height: 1300px;
 }
 
 .roadmap-timeline {
@@ -835,7 +846,7 @@ body {
 }
 
 .roadmap-timeline .roadmap-ul .roadmap-li:nth-child(odd) .roadmap-content {
-  padding-left: 50px !important;
+  padding-left: 50px;
   color: var(--white);
 }
 
@@ -899,17 +910,56 @@ body {
   right: -15px;
 }
 
+@media screen and (max-width: 1800px) {
+  .roadmap-lesso-img {
+    bottom: 10%;
+    left: 30%;
+  }
+}
+
+@media screen and (max-width: 1600px) {
+  .roadmap-lesso-img {
+    bottom: 10%;
+    left: 27%;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .roadmap-lesso-img {
+    bottom: 10%;
+    left: 25%;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .roadmap-lesso-img {
+    bottom: 10%;
+    left: 20%;
+  }
+}
+
 @media screen and (max-width: 990px) {
+  #roadmap {
+    padding: 0;
+  }
+
+  .roadmap-lesso-img {
+    display: none;
+  }
+
+  .roadmap-timeline {
+    width: 350px;
+    display: flex;
+    margin-top: 0;
+    justify-content: center;
+  }
+
   .roadmap-timeline::before {
     display: none;
   }
 
   .roadmap-timeline::after {
     display: none;
-  }
-
-  .roadmap-timeline {
-    width: auto;
   }
 
   .roadmap-timeline .roadmap-ul .roadmap-li {
@@ -946,9 +996,7 @@ body {
   }
 
   .roadmap-timeline .roadmap-ul .roadmap-li:nth-child(odd) .roadmap-content {
-    padding-left: 50px !important;
-    color: var(--white);
-    /* margin-top: 100px; */
+    padding-left: 0;
   }
 
   .roadmap-timeline .roadmap-ul .roadmap-li:nth-child(even) .roadmap-content {
@@ -976,12 +1024,12 @@ body {
     background-color: var(--button-accents);
     border-radius: 50%;
     top: 7px;
-    left: 0;
+    left: -10px;
   }
 
   .roadmap-left-ul li::before {
     top: 10px;
-    left: 0;
+    left: -10px;
   }
 }
 
@@ -1040,7 +1088,9 @@ body {
 
 .accordions .contentBox .label {
   position: relative;
-  padding: 45px 20px;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
   height: 110px;
   background: url(./images/benefits-accordion-bg.svg);
   background-repeat: no-repeat;
@@ -1088,6 +1138,8 @@ body {
 
   #benefits {
     background: none;
+    height: auto;
+    padding: 80px 0 40px;
   }
 
   .benefits-title {
