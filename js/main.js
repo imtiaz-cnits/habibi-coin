@@ -7,6 +7,13 @@ gsap.from("#hero-moon", {
     y: -700,
 })
 
+gsap.from("#footer-moon", {
+    scrollTrigger : {
+        scrub: true
+    },
+    y: -5000,
+})
+
 gsap.from("#feature-camels", {
     scrollTrigger : {
         scrub: true
@@ -21,11 +28,32 @@ gsap.from("#benefits-camels", {
     x: 600,
 })
 
-gsap.from("#footer-moon", {
+gsap.from("#parallax-building", {
     scrollTrigger : {
         scrub: true
     },
-    y: -5000,
+    y: -800,
+})
+
+gsap.from("#parallax-tree", {
+    scrollTrigger : {
+        scrub: true
+    },
+    y: -800,
+})
+
+gsap.from("#feature-parallax-tree", {
+    scrollTrigger : {
+        scrub: true
+    },
+    y: -800,
+})
+
+gsap.from("#feature-parallax-building", {
+    scrollTrigger : {
+        scrub: true
+    },
+    y: -800,
 })
 
 

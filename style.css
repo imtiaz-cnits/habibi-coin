@@ -443,6 +443,53 @@ body {
   margin: 0 80px;
 }
 
+@media screen and (max-width: 990px) {
+  .gallery-content {
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(5);
+    padding: 30px 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .gallery-content {
+    display: grid;
+    grid-gap: 0;
+  }
+
+  .gallery-content img:nth-child(1) {
+    margin-top: -15px;
+  }
+  .gallery-content img:nth-child(2) {
+    margin-top: 15px;
+  }
+  .gallery-content img:nth-child(3) {
+    margin-top: -15px;
+  }
+  .gallery-content img:nth-child(4) {
+    margin-top: 5px;
+  }
+  .gallery-content img:nth-child(5) {
+    margin-top: -15px;
+  }
+  .gallery-content img:nth-child(6) {
+    margin-top: -30px;
+  }
+  .gallery-content img:nth-child(7) {
+    margin-top: 0px;
+  }
+  .gallery-content img:nth-child(8) {
+    margin-top: -30px;
+  }
+  .gallery-content img:nth-child(9) {
+    margin-top: -10px;
+  }
+  .gallery-content img:nth-child(10) {
+    margin-top: -30px;
+  }
+}
+
 /* habibi image gallery */
 
 /* about us */
@@ -486,11 +533,12 @@ body {
 
 @media screen and (max-width: 990px) {
   #about {
-    padding: 80px 0 0;
+    padding: 100px 0 0;
   }
 
   .about-text p {
     padding: 0;
+    font-size: 1em;
   }
 
   .about-header h4 {
@@ -515,6 +563,20 @@ body {
   padding: 100px 0;
 }
 
+.feature-building-img .parallax-tree {
+  position: absolute;
+  left: 15%;
+  z-index: -1;
+  bottom: 360px;
+}
+
+.feature-building-img .parallax-building {
+  position: absolute;
+  right: 20%;
+  z-index: -1;
+  bottom: 360px;
+}
+
 .feature-camel-img {
   padding-left: 500px;
 }
@@ -522,15 +584,6 @@ body {
 .feature-image {
   position: absolute;
   z-index: -1;
-}
-
-#feature marquee {
-  position: absolute;
-  padding-top: 80px;
-}
-
-#feature marquee img {
-  margin: 0 150px;
 }
 
 .dates-tree-img {
@@ -649,13 +702,43 @@ body {
 
 @media screen and (max-width: 1800px) {
   .feature-camel-img img {
-    width: 70%;
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 1600px) {
+  .feature-building-img .parallax-tree {
+    position: absolute;
+    left: 15%;
+    z-index: -1;
+    bottom: 330px;
+  }
+
+  .feature-building-img .parallax-building {
+    position: absolute;
+    right: 20%;
+    z-index: -1;
+    bottom: 330px;
   }
 }
 
 @media screen and (max-width: 1400px) {
   .feature-camel-img {
     padding-top: 40px;
+  }
+
+  .feature-building-img .parallax-tree {
+    position: absolute;
+    left: 15%;
+    z-index: -1;
+    bottom: 390px;
+  }
+
+  .feature-building-img .parallax-building {
+    position: absolute;
+    right: 20%;
+    z-index: -1;
+    bottom: 390px;
   }
 }
 
@@ -666,6 +749,10 @@ body {
   }
 
   .feature-camel-img {
+    display: none;
+  }
+
+  .feature-building-img {
     display: none;
   }
 }
@@ -869,6 +956,18 @@ body {
   right: -350px;
 }
 
+.roadmap-image img {
+  transition: 0.5s;
+}
+
+.roadmap-ul .roadmap-li:nth-child(even) .roadmap-image img:hover {
+  transform: rotate(-8deg) scale(1.1);
+}
+
+.roadmap-ul .roadmap-li:nth-child(odd) .roadmap-image img:hover {
+  transform: rotate(8deg) scale(1.1);
+}
+
 .roadmap-content h4 {
   font-size: 1.4em;
   margin-bottom: 15px;
@@ -1044,13 +1143,32 @@ body {
   background-repeat: no-repeat;
   height: 1000px;
   padding: 100px 0;
+  position: relative;
+}
+
+.benefits-camels {
+  padding-left: 200px;
+}
+
+.benefits-building-img .parallax-building {
+  position: absolute;
+  left: 15%;
+  z-index: -1;
+  top: 160px;
+}
+
+.benefits-building-img .parallax-tree {
+  position: absolute;
+  right: 25%;
+  z-index: -1;
+  top: 180px;
 }
 
 .benefits-title {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 200px 0 30px 0;
+  padding: 100px 0 30px 0;
 }
 
 .benefits-title h4 {
@@ -1131,6 +1249,18 @@ body {
   padding: 10px;
 }
 
+@media screen and (max-width: 1800px) {
+  .benefits-camels img {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .benefits-camels {
+    padding-top: 40px;
+  }
+}
+
 @media screen and (max-width: 990px) {
   .benefits-camels {
     display: none;
@@ -1144,6 +1274,10 @@ body {
 
   .benefits-title {
     padding: 0 0 30px 0;
+  }
+
+  .benefits-building-img {
+    display: none;
   }
 }
 
