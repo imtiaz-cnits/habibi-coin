@@ -37,6 +37,8 @@ body {
 
 #hero {
   position: relative;
+  height: 100vh;
+  overflow: hidden;
 }
 
 .hero-bg .hero-bg-1 {
@@ -46,6 +48,59 @@ body {
   width: 100%;
   pointer-events: none;
   z-index: -999;
+}
+
+.hero-bg-center {
+  position: absolute;
+  top: -50px;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  width: 100%;
+}
+
+.hero-bg-left {
+  position: absolute;
+  top: 300px;
+  left: 300px;
+  z-index: 111;
+  width: 100%;
+}
+
+.hero-bg-right {
+  position: absolute;
+  top: 300px;
+  right: 0;
+  z-index: 1;
+  width: 100%;
+}
+
+.navbar {
+  z-index: 9999 !important;
+  transition: 0.5s;
+}
+
+.navbar-nav li a {
+  color: var(--white);
+  font-size: 14px;
+  transition: 0.5s;
+}
+
+.navbar-nav li a:hover {
+  color: var(--button-accents);
+}
+
+.navbar-toggler {
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+.navbar .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.navbar .navbar-toggler {
+  border: none;
 }
 
 .navbars {
@@ -60,6 +115,11 @@ body {
   align-items: center;
   list-style: none;
   margin-bottom: 0;
+  padding-left: 0;
+}
+
+.navbars ul li:nth-child(1) {
+  margin-left: 0;
 }
 
 .navbars ul li {
@@ -73,7 +133,7 @@ body {
 .navbars ul .switch {
   position: relative;
   width: 100px;
-  height: 32px;
+  height: 40px;
   font-size: 13px;
   border-radius: 6px;
 }
@@ -81,11 +141,12 @@ body {
 .navbars ul .switch input {
   appearance: none;
   width: 100px;
-  height: 32px;
+  height: 40px;
   outline: none;
-  border-radius: 6px;
-  border: 1px solid var(--white);
+  border-radius: 8px;
+  border: 2px solid var(--white);
   cursor: pointer;
+  transition: 0.5s;
 }
 
 .switch input::before,
@@ -94,6 +155,7 @@ body {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
+  transition: 0.5s;
 }
 
 .switch input::before {
@@ -109,9 +171,9 @@ body {
 .switch label {
   z-index: 1;
   position: absolute;
-  top: 3px;
-  bottom: 3px;
-  border-radius: 6px;
+  top: 4px;
+  bottom: 4px;
+  border-radius: 8px;
 }
 
 .switch input {
@@ -130,10 +192,11 @@ body {
 }
 
 .switch input:checked + label {
-  left: 3px;
-  right: 50px;
+  left: 4px;
+  right: 0;
+  width: 40px;
   background: var(--button-accents);
-  transition: left 0.5s, right 0.4s 0.2s;
+  transition: width 0.5s;
 }
 
 .switch input:not(:checked)::before {
@@ -143,27 +206,18 @@ body {
 
 .switch input:not(:checked)::after {
   color: var(--secondary-text);
-  transition: color 0.5s 0.2s;
+  transition: color 0.5s;
 }
 
 .switch input:not(:checked) + label {
-  left: 60px;
-  right: 3px;
+  width: 40px;
+  right: 4px;
   background-color: var(--button-accents);
-  transition: left 0.5s, right 0.4s 0.2s;
+  transition: width 0.5s;
 }
 
 .logo {
   z-index: 9999 !important;
-}
-
-.hero-bg-2 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  pointer-events: none;
-  z-index: -1;
 }
 
 .moon {
@@ -178,10 +232,12 @@ body {
 }
 
 .hero-text {
-  height: 80vh;
-  padding-top: 50px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 150px;
   text-align: center;
-  z-index: 9999 !important;
+  z-index: 999 !important;
 }
 
 .hero-text h1 {
@@ -212,6 +268,7 @@ body {
     inset -4px -4px 12px rgba(0, 0, 0, 0.15),
     inset 4px 4px 8px rgba(255, 255, 255, 0.5);
   border-radius: 6px;
+  z-index: 9999 !important;
 }
 
 .hero-btn a:hover {
@@ -248,15 +305,41 @@ body {
 
 @media screen and (max-width: 1200px) {
   .hero-text {
-    height: 600px;
+    width: 100%;
   }
 
   .moon img {
     width: 70%;
   }
+
+  .navbar-nav li a {
+    color: var(--white);
+    font-size: 10px;
+    transition: 0.5s;
+  }
+
+  .hero-bg-center {
+    top: 0px;
+  }
+
+  .hero-bg-left {
+    top: 250px;
+    left: 300px;
+    width: 90%;
+  }
+
+  .hero-bg-right {
+    top: 250px;
+    right: 100px;
+    width: 90%;
+  }
 }
 
 @media screen and (max-width: 990px) {
+  .navbar {
+    background-color: var(--background-3rd);
+  }
+
   .hero-text {
     height: 550px;
   }
@@ -267,6 +350,22 @@ body {
 
   .hero-btn a {
     padding: 3px 25px;
+  }
+
+  .hero-bg-left {
+    position: absolute;
+    top: 200px;
+    left: 320px;
+    z-index: 111;
+    width: 100%;
+  }
+
+  .hero-bg-right {
+    position: absolute;
+    top: 200px;
+    right: 200px;
+    z-index: 1;
+    width: 100%;
   }
 
   .moon img {
@@ -287,6 +386,18 @@ body {
     font-size: 14px;
     line-height: 10px;
     padding: 0 20px;
+  }
+
+  .hero-bg-left {
+    top: 150px;
+    left: 320px;
+    width: 100%;
+  }
+
+  .hero-bg-right {
+    top: 150px;
+    right: 200px;
+    width: 100%;
   }
 
   .moon img {
@@ -313,6 +424,23 @@ body {
 
   .hero-social-icons a {
     display: none;
+  }
+
+  .hero-bg-left {
+    top: 200px;
+    left: 320px;
+    width: 100%;
+  }
+
+  .hero-bg-right {
+    top: 200px;
+    right: 200px;
+    width: 100%;
+  }
+
+  .hero-bg-center {
+    top: 100px;
+    width: 100%;
   }
 }
 
@@ -364,8 +492,21 @@ body {
     width: 110px;
   }
 
-  #habibi-image-gallery {
-    margin-top: -230px;
+  .hero-bg-left {
+    top: 200px;
+    left: 340px;
+    width: 100%;
+  }
+
+  .hero-bg-right {
+    top: 200px;
+    right: 280px;
+    width: 100%;
+  }
+
+  .hero-bg-center {
+    top: 120px;
+    width: 100%;
   }
 
   .moon img {
@@ -383,6 +524,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+  z-index: 99;
 }
 
 .gallery-content {
@@ -762,7 +904,7 @@ body {
 /* roadmap */
 
 #roadmap {
-  padding: 100px 0 150px;
+  padding: 100px 0 70px;
   position: relative;
 }
 
@@ -797,8 +939,9 @@ body {
 
 .roadmap-lesso-img {
   position: absolute;
-  bottom: 10%;
-  left: 35%;
+  left: 50%;
+  top: 15%;
+  transform: translateX(-50%);
 }
 
 .roadmap-lesso-img img {
@@ -813,25 +956,14 @@ body {
   width: 1000px;
 }
 
-.roadmap-timeline::before {
-  content: "";
+.roadmap-line {
   position: absolute;
   left: 50%;
-  width: 30px;
-  height: 100%;
-  border-radius: 6px;
-  background-color: var(--background-2nd);
+  transform: translateX(-50%);
 }
 
-.roadmap-timeline::after {
-  content: "";
-  position: absolute;
-  left: 50.72%;
-  top: 32px;
-  height: 98%;
-  width: 6px;
-  border-left: 15px dashed var(--button-accents);
-  z-index: 1;
+.roadmap-line img {
+  width: 90px;
 }
 
 .roadmap-timeline .roadmap-ul {
@@ -864,81 +996,13 @@ body {
   padding-bottom: 20px;
 }
 
-.roadmap-timeline .roadmap-ul .roadmap-li:nth-child(1)::before {
-  content: "1";
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  left: -5px;
-  width: 40px;
-  height: 40px;
-  text-align: center;
-  font-size: 1.5em;
-  line-height: 28px;
-  border-radius: 50%;
-  background: var(--button-accents);
-  border: 4px solid var(--background-2nd);
-  z-index: 9999;
-}
-
-.roadmap-timeline .roadmap-ul .roadmap-li:nth-child(2)::before {
-  content: "2";
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  right: -35px;
-  width: 40px;
-  height: 40px;
-  text-align: center;
-  font-size: 1.5em;
-  line-height: 28px;
-  border-radius: 50%;
-  background: var(--button-accents);
-  border: 4px solid var(--background-2nd);
-  z-index: 9999;
-}
-
-.roadmap-timeline .roadmap-ul .roadmap-li:nth-child(3)::before {
-  content: "3";
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  left: -5px;
-  width: 40px;
-  height: 40px;
-  text-align: center;
-  font-size: 1.5em;
-  line-height: 20px;
-  border-radius: 50%;
-  background: var(--button-accents);
-  border: 4px solid var(--background-2nd);
-  z-index: 9999;
-}
-
-.roadmap-timeline .roadmap-ul .roadmap-li:nth-child(4)::before {
-  content: "4";
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  right: -35px;
-  width: 40px;
-  height: 40px;
-  text-align: center;
-  font-size: 1.5em;
-  line-height: 20px;
-  border-radius: 50%;
-  background: var(--button-accents);
-  border: 4px solid var(--background-2nd);
-  z-index: 9999;
-}
-
 .roadmap-timeline .roadmap-ul .roadmap-li:nth-child(odd) .roadmap-content {
-  padding-left: 50px;
+  padding-left: 80px;
   color: var(--white);
 }
 
 .roadmap-timeline .roadmap-ul .roadmap-li:nth-child(even) .roadmap-content {
-  padding-right: 20px;
+  padding-right: 80px;
   color: var(--white);
 }
 
@@ -946,7 +1010,7 @@ body {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  left: -320px;
+  left: -350px;
 }
 
 .roadmap-timeline .roadmap-ul .roadmap-li:nth-child(even) .roadmap-image {
@@ -969,7 +1033,7 @@ body {
 }
 
 .roadmap-content h4 {
-  font-size: 1.4em;
+  font-size: 1.6em;
   margin-bottom: 15px;
 }
 
@@ -1009,31 +1073,17 @@ body {
   right: -15px;
 }
 
-@media screen and (max-width: 1800px) {
-  .roadmap-lesso-img {
-    bottom: 10%;
-    left: 30%;
-  }
-}
-
-@media screen and (max-width: 1600px) {
-  .roadmap-lesso-img {
-    bottom: 10%;
-    left: 27%;
-  }
-}
-
-@media screen and (max-width: 1400px) {
-  .roadmap-lesso-img {
-    bottom: 10%;
-    left: 25%;
-  }
-}
-
 @media screen and (max-width: 1200px) {
-  .roadmap-lesso-img {
-    bottom: 10%;
-    left: 20%;
+  .roadmap-timeline .roadmap-ul .roadmap-li:nth-child(even) {
+    margin-top: 50px;
+  }
+
+  .roadmap-timeline .roadmap-ul .roadmap-li:nth-child(odd) {
+    margin-top: 50px;
+  }
+
+  .roadmap-timeline {
+    width: 100%;
   }
 }
 
@@ -1046,11 +1096,19 @@ body {
     display: none;
   }
 
+  .roadmap-line {
+    display: none;
+  }
+
   .roadmap-timeline {
     width: 350px;
     display: flex;
     margin-top: 0;
     justify-content: center;
+  }
+
+  .roadmap-content h4 {
+    font-size: 1.4em;
   }
 
   .roadmap-timeline::before {
@@ -1076,22 +1134,6 @@ body {
     float: left;
     text-align: left;
     clear: none;
-  }
-
-  .roadmap-timeline .roadmap-ul .roadmap-li:nth-child(1)::before {
-    display: none;
-  }
-
-  .roadmap-timeline .roadmap-ul .roadmap-li:nth-child(2)::before {
-    display: none;
-  }
-
-  .roadmap-timeline .roadmap-ul .roadmap-li:nth-child(3)::before {
-    display: none;
-  }
-
-  .roadmap-timeline .roadmap-ul .roadmap-li:nth-child(4)::before {
-    display: none;
   }
 
   .roadmap-timeline .roadmap-ul .roadmap-li:nth-child(odd) .roadmap-content {
@@ -1516,6 +1558,11 @@ body {
   text-decoration: none;
   color: var(--white);
   font-size: 12px;
+  transition: 0.5s;
+}
+
+.footer-navbar ul li a:hover {
+  color: var(--button-accents);
 }
 
 .copyright {

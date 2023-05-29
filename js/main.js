@@ -7,11 +7,18 @@ gsap.from("#hero-moon", {
     y: -700,
 })
 
-gsap.from("#footer-moon", {
+gsap.from("#hero-desert-left", {
     scrollTrigger : {
         scrub: true
     },
-    y: -5000,
+    x: -400,
+})
+
+gsap.from("#hero-desert-right", {
+    scrollTrigger : {
+        scrub: true
+    },
+    x: 400,
 })
 
 gsap.from("#feature-camels", {
@@ -55,6 +62,21 @@ gsap.from("#feature-parallax-building", {
     },
     y: -800,
 })
+
+
+// navbar scroll to color change
+var nav = document.querySelector('.navbar'); // Identify target
+
+window.addEventListener('scroll', function(event) { // To listen for event
+    event.preventDefault();
+
+    if (window.scrollY >= 150) { // Just an example
+        nav.style.backgroundColor = '#bc603b'; // or default color
+    } else {
+        nav.style.backgroundColor = 'transparent';
+    }
+});
+
 
 
 // accordion
