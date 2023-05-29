@@ -26,6 +26,8 @@
 
 body {
   background: var(--background) !important;
+  background-image: url(./images/root-background.svg) !important;
+  width: 100%;
 }
 
 .containers {
@@ -62,15 +64,15 @@ body {
 .hero-bg-left {
   position: absolute;
   top: 300px;
-  left: 300px;
+  left: -100px;
   z-index: 111;
   width: 100%;
 }
 
 .hero-bg-right {
   position: absolute;
-  top: 300px;
-  right: 0;
+  top: 350px;
+  right: -200px;
   z-index: 1;
   width: 100%;
 }
@@ -222,7 +224,7 @@ body {
 
 .moon {
   position: absolute;
-  top: 850px;
+  top: 50px;
   left: 17%;
   z-index: -1;
 }
@@ -234,6 +236,7 @@ body {
 .hero-text {
   position: absolute;
   left: 50%;
+  width: 100%;
   transform: translateX(-50%);
   margin-top: 150px;
   text-align: center;
@@ -524,64 +527,80 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+  padding: 100px 0 0 0;
   z-index: 99;
+  overflow: hidden;
 }
 
 .gallery-content {
   display: grid;
-  grid-gap: 5px;
-  grid-template-columns: auto auto auto auto auto;
-  padding: 50px;
+  grid-template-columns: repeat(5, 1fr);
+  padding: 50px 0 0;
 }
 
 .gallery-content img {
   width: 100%;
-  transition: 0.5s;
-}
-
-.gallery-content img:hover {
-  transform: rotate(3deg) scale(1.05);
+  padding: 10px 5px;
 }
 
 .gallery-content img:nth-child(1) {
-  margin-top: -25px;
+  padding-top: 0px;
 }
 .gallery-content img:nth-child(2) {
-  margin-top: 25px;
+  margin-top: -55px !important;
 }
 .gallery-content img:nth-child(3) {
-  margin-top: -25px;
+  padding-top: 0px;
 }
 .gallery-content img:nth-child(4) {
-  margin-top: 25px;
+  margin-top: -55px !important;
 }
 .gallery-content img:nth-child(5) {
-  margin-top: -25px;
+  padding-top: 0px;
 }
 .gallery-content img:nth-child(6) {
-  margin-top: -40px;
+  padding-top: 0px;
 }
 .gallery-content img:nth-child(7) {
-  margin-top: 10px;
+  margin-top: -55px !important;
 }
 .gallery-content img:nth-child(8) {
-  margin-top: -40px;
+  padding-top: 0px;
 }
 .gallery-content img:nth-child(9) {
-  margin-top: 10px;
+  margin-top: -55px !important;
 }
 .gallery-content img:nth-child(10) {
-  margin-top: -40px;
+  padding-top: 0px;
 }
 
-.habibi-token {
-  background: var(--button-accents);
+.scroll-text-wrapper {
+  overflow: hidden;
+  width: 100%;
+  background-color: var(--button-accents);
+  padding: 20px;
   transform: rotate(-3deg);
-  position: absolute;
-  bottom: 0px;
+  margin-bottom: 50px;
 }
 
-.habibi-token img {
+.scroll-text {
+  font-size: 1.4em;
+  white-space: nowrap;
+  font-weight: 600;
+  animation: scrollText 20s linear infinite;
+  animation-delay: -40s;
+}
+
+@keyframes scrollText {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.scroll-text img {
   margin: 0 80px;
 }
 
@@ -595,41 +614,6 @@ body {
 }
 
 @media screen and (max-width: 768px) {
-  .gallery-content {
-    display: grid;
-    grid-gap: 0;
-  }
-
-  .gallery-content img:nth-child(1) {
-    margin-top: -15px;
-  }
-  .gallery-content img:nth-child(2) {
-    margin-top: 15px;
-  }
-  .gallery-content img:nth-child(3) {
-    margin-top: -15px;
-  }
-  .gallery-content img:nth-child(4) {
-    margin-top: 5px;
-  }
-  .gallery-content img:nth-child(5) {
-    margin-top: -15px;
-  }
-  .gallery-content img:nth-child(6) {
-    margin-top: -30px;
-  }
-  .gallery-content img:nth-child(7) {
-    margin-top: 0px;
-  }
-  .gallery-content img:nth-child(8) {
-    margin-top: -30px;
-  }
-  .gallery-content img:nth-child(9) {
-    margin-top: -10px;
-  }
-  .gallery-content img:nth-child(10) {
-    margin-top: -30px;
-  }
 }
 
 /* habibi image gallery */
@@ -637,7 +621,6 @@ body {
 /* about us */
 
 #about {
-  background: var(--background);
   z-index: 100 !important;
   padding: 150px 0;
 }
@@ -774,15 +757,7 @@ body {
 .feature-card {
   position: relative;
   background-color: rgba(40, 18, 3, 0.5);
-  border-width: 1px;
-  border-style: solid;
-  border-image-slice: 1;
-  border-image-source: linear-gradient(
-    235deg,
-    #ffe600,
-    rgba(40, 18, 3, 0.5),
-    #ffe600
-  );
+  border-radius: 8px;
   padding: 30px 20px 50px;
   margin-top: 30px;
 }
