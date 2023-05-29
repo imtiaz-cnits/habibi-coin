@@ -26,7 +26,7 @@
 
 body {
   background: var(--background) !important;
-  background-image: url(./images/root-background.svg) !important;
+  /* background-image: url(./images/root-background.svg) !important; */
   width: 100%;
 }
 
@@ -688,24 +688,6 @@ body {
   padding: 100px 0;
 }
 
-.feature-building-img .parallax-tree {
-  position: absolute;
-  left: 15%;
-  z-index: -1;
-  bottom: 360px;
-}
-
-.feature-building-img .parallax-building {
-  position: absolute;
-  right: 20%;
-  z-index: -1;
-  bottom: 360px;
-}
-
-.feature-camel-img {
-  padding-left: 500px;
-}
-
 .feature-image {
   position: absolute;
   z-index: -1;
@@ -760,11 +742,19 @@ body {
   border-radius: 8px;
   padding: 30px 20px 50px;
   margin-top: 30px;
+  overflow: hidden;
+  border: 3px solid rgba(40, 18, 3, 0.1);
+  transition: 0.5s;
+}
+
+.feature-card:hover {
+  background-color: rgba(40, 18, 3, 0.8);
+  border: 3px solid var(--button-accents);
 }
 
 .feature-card .card-icon {
-  width: 50px;
-  height: 50px;
+  width: 70px;
+  height: 70px;
   display: block;
   margin: auto;
 }
@@ -788,6 +778,17 @@ body {
   position: absolute;
   bottom: 0;
   width: 50px;
+  animation: bounchOpacity 4s alternate infinite;
+  transition: 0.5s;
+}
+
+@keyframes bounchOpacity {
+  0% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .card-image .card-bottom-image.img-1 {
@@ -1553,6 +1554,37 @@ body {
   font-size: 12px;
   font-family: var(--secondary-font);
   margin-bottom: 0;
+}
+
+.footer-scroll-text-wrapper {
+  overflow: hidden;
+  width: 100%;
+  background-color: var(--button-accents);
+  padding: 20px;
+  transform: rotate(3deg);
+  position: absolute;
+  top: -70px;
+}
+
+.footer-scroll-text {
+  font-size: 1.4em;
+  white-space: nowrap;
+  font-weight: 600;
+  animation: footerScrollText 20s linear infinite;
+  animation-delay: -40s;
+}
+
+@keyframes footerScrollText {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.footer-scroll-text img {
+  margin: 0 80px;
 }
 
 @media screen and (max-width: 2000px) {

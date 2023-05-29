@@ -32,55 +32,91 @@ const chartData = {
     data: [35, 30, 20, 15, 05],
 };
 
-const myChart = document.querySelector(".my-chart");
+const myChart = document.querySelector("#my-chart");
 const ul = document.querySelector(".chart-stats .details ul");
 
-new Chart(myChart, {
-    type: "doughnut",
-    data: {
-        lebels: chartData.labels,
-        datasets: [
-            {
-                data: chartData.data,
-                backgroundColor: [
-                    "#ffe600",
-                    "#B6DB71",
-                    "#2EB9DE",
-                    "#FF8E31",
-                    "#9F64D0",
-                ],
-            },
-        ],
-    },
+// new Chart(myChart, {
+//     type: "doughnut",
+//     data: {
+//         lebels: chartData.labels,
+//         datasets: [
+//             {
+//                 data: chartData.data,
+//                 backgroundColor: [
+//                     "#ffe600",
+//                     "#B6DB71",
+//                     "#2EB9DE",
+//                     "#FF8E31",
+//                     "#9F64D0",
+//                 ],
+//             },
+//         ],
+//     },
+//     options: {
+//         elements: {
+//             arc: {
+//                 borderWidth: 0,
+//             },
+//         },
+//         cutoutPercentage: 60,
+//         cutout: "70%",
+//         responsive: true,
+//         plugins: {
+//             legend: {
+//                 display: true,
+//             },
+//         },
+//     },
+// });
+
+const data = {
+    labels: 
+     chartData.labels,
+    datasets: [{
+      label: 'My Dataset',
+      data: chartData.data,
+      backgroundColor: [
+        "#ffe600",
+        "#B6DB71",
+        "#2EB9DE",
+        "#FF8E31",
+        "#9F64D0",
+      ],
+      hoverOffset: 8
+    }],
+    borderWidth: 0
+  };
+
+
+  const config = {
+    type: 'doughnut',
+    data: data,
     options: {
-        borderRadius: 6,
-        // elements: {
-        //     arc: {
-        //         borderWidth: 0
-        //     }
-        // },
-        elements: {
-            arc: {
-                borderWidth: 0,
-            },
-        },
-        cutoutPercentage: 60,
-        responsive: true,
-        spacing: 20,
+        borderWidth: 0,
+        cutout: "70%",
         plugins: {
             legend: {
-                display: false,
+                labels: {
+                    usePointStyle: true,
+                },
             },
         },
     },
-});
+  };
+
+const ctx = document.getElementById("my-chart");
+const mycharts = new Chart(
+    ctx,
+    config
+); 
 
 const populateUl = () => {
     chartData.labels.forEach((l, i) => {
         let li = document.createElement("li");
-        li.innerHTML = `${l} - <span class='percentage'>${chartData.data[i]}%</span>`; 
+        li.innerHTML = `<span id='lagendColor'></span>${l} - <span class='percentage'>${chartData.data[i]}%</span>`; 
         ul.appendChild(li);
     })
 }
+
 
 populateUl();
