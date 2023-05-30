@@ -87,6 +87,29 @@ const data = {
     borderWidth: 0
   };
 
+  // hover chart to so parcentage
+
+const hoverLabel = {
+    id: 'hoverLabel',
+    afterDraw(chart, arg, options) {
+        const {ctx, chartArea: {left, right, top, bottom, width, height}} = chart;
+        ctx.save();       
+
+        if(chart._active.length > 0) {
+
+            const textLabel = chart.config.data.labels[chart._active[0].index];
+            console.log(chart.config.data.labels);
+            const numberLabel = chart.config.data.datasets[chart._active[0].datasetIndex].data[chart._active[0].index];
+            // const color = chart.config.data.datasets[chart._active[0].datasetIndex].backgroundColor[chart._active[0].index];
+            
+        ctx.font = 'bolder 20px Inknut Antiqua';
+        ctx.fillStyle = "#fff";
+        ctx.fillAlign = 'center';
+        ctx.fillText(`${numberLabel}% ${textLabel}`, width / 4.2, height / 2 + top)
+    }
+    }
+ };
+
 
   const config = {
     type: 'doughnut',
@@ -94,14 +117,17 @@ const data = {
     options: {
         borderWidth: 0,
         cutout: "70%",
-        plugins: {
+        plugins:{
             legend: {
                 labels: {
                     usePointStyle: true,
                 },
+                display: false,
             },
+            
         },
     },
+    plugins: [hoverLabel]
   };
 
 const ctx = document.getElementById("my-chart");
@@ -113,10 +139,9 @@ const mycharts = new Chart(
 const populateUl = () => {
     chartData.labels.forEach((l, i) => {
         let li = document.createElement("li");
-        li.innerHTML = `<span id='lagendColor'></span>${l} - <span class='percentage'>${chartData.data[i]}%</span>`; 
+        li.innerHTML = `${l} - <span class='percentage'>${chartData.data[i]}%</span>`; 
         ul.appendChild(li);
     })
 }
-
-
 populateUl();
+

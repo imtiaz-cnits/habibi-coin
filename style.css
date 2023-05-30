@@ -1338,17 +1338,18 @@ body {
 }
 
 .chart-container {
-  width: 400px;
-  height: 300px;
-  background-color: var(--background-2nd);
-  padding: 20px 80px;
-  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .chart-stats {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
+  background-color: var(--background-2nd);
+  padding: 50px 80px;
+  border-radius: 8px;
 }
 
 .details {
@@ -1358,6 +1359,8 @@ body {
   padding: 20px;
   border-radius: 8px;
   margin-left: 20px;
+  display: flex;
+  align-items: center;
 }
 
 .details ul {
@@ -1377,24 +1380,13 @@ body {
   }
   .chart-stats {
     display: block;
+    padding: 20px 0px;
   }
 
-  .details {
+  /* .details {
     width: 400px;
     margin: 40px auto 0 auto;
-  }
-}
-
-@media screen and (max-width: 500px) {
-  .chart-container {
-    width: 300px;
-    height: auto;
-  }
-
-  .details {
-    width: 300px;
-    height: auto;
-  }
+  } */
 }
 
 /* tockenomics */
