@@ -623,6 +623,33 @@ body {
 #about {
   z-index: 100 !important;
   padding: 150px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.about-cloud img {
+  position: absolute;
+  pointer-events: none;
+}
+
+#about-cloud-left {
+  left: 0;
+  bottom: 0;
+}
+
+#about-cloud-right {
+  right: 0;
+  top: 0;
+}
+
+#roadmap-cloud-left {
+  left: 0;
+  bottom: 0;
+}
+
+#roadmap-cloud-right {
+  right: 0;
+  top: 0;
 }
 
 .about-header {

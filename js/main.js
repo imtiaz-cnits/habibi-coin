@@ -1,3 +1,15 @@
+// paralaax effect
+
+let aboutCloudLeft = document.getElementById('about-cloud-left');
+let aboutCloudRight = document.getElementById('about-cloud-right');
+
+window.addEventListener('scroll', () => {
+    let value = window.scrollY;
+
+    aboutCloudLeft.style.left = value * 1 + 'px';
+    aboutCloudRight.style.right = value * 1 + 'px';
+});
+
 
 // navbar scroll to color change
 var nav = document.querySelector('.navbar'); // Identify target
