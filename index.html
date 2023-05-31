@@ -7,7 +7,7 @@
     <title>Habibi Coin - Landing Page</title>
 
     <!-- favicon -->
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="favicon.icon" type="image/x-icon" />
 
     <!-- css link -->
     <link rel="stylesheet" href="./style.css" />
@@ -184,20 +184,22 @@
       <div class="container">
         <div class="row">
           <div class="col-sm-12">
-            <div class="about-header">
-              <div></div>
-              <h4>ABOUT US</h4>
-              <div></div>
-            </div>
-            <div class="about-text">
-              <p>
-                Habibi Token is the first Arabic meme project that will
-                Launching on the Binance Smart Chain (BSC) network Its primary
-                use case is to spread love and laughter while also raising funds
-                for charity works, and users can also use the Habibi token to
-                purchase Habibi NFTs to send to their loved ones as either an
-                apology gift or a show of affection gift.
-              </p>
+            <div class="about-content">
+              <div class="about-header">
+                <div></div>
+                <h4>ABOUT US</h4>
+                <div></div>
+              </div>
+              <div class="about-text">
+                <p>
+                  Habibi Token is the first Arabic meme project that will
+                  Launching on the Binance Smart Chain (BSC) network Its primary
+                  use case is to spread love and laughter while also raising
+                  funds for charity works, and users can also use the Habibi
+                  token to purchase Habibi NFTs to send to their loved ones as
+                  either an apology gift or a show of affection gift.
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -207,21 +209,21 @@
 
     <!-- feature -->
     <section id="feature">
-      <!-- <div class="feature-building-img">
+      <div class="feature-building-img">
         <img
           src="./images/feature-parallax-tree.svg"
           alt=""
-          class="parallax-tree"
+          class="feature-dates-tree-img"
           id="feature-parallax-tree"
         />
         <img
           src="./images/feature-parallax-building.svg"
           alt=""
-          class="parallax-building"
+          class="feature-building"
           id="feature-parallax-building"
         />
       </div>
-      <div class="feature-camel-img">
+      <!-- <div class="feature-camel-img">
         <img src="./images/feature-camels.svg" alt="" id="feature-camels" />
       </div> -->
       <div class="container">
@@ -343,6 +345,18 @@
 
     <!-- roadmap -->
     <section id="roadmap">
+      <div class="roadmap-cloud">
+        <img
+          src="./images/roadmap-cloud-left.svg"
+          alt=""
+          id="roadmap-cloud-left"
+        />
+        <img
+          src="./images/roadmap-cloud-right.svg"
+          alt=""
+          id="roadmap-cloud-right"
+        />
+      </div>
       <div class="roadmap-title">
         <div></div>
         <h4>ROADMAP</h4>
@@ -421,21 +435,21 @@
 
     <!-- benefits -->
     <section id="benefits">
-      <!-- <div class="benefits-building-img">
+      <div class="benefits-building-img">
         <img
           src="./images/benefits-parallax-building.svg"
           alt=""
-          class="parallax-building"
-          id="parallax-building"
+          class="benefits-parallax-building"
+          id="benefits-parallax-building"
         />
         <img
           src="./images/benefits-parallax-tree.svg"
           alt=""
-          class="parallax-tree"
-          id="parallax-tree"
+          class="benefits-parallax-tree"
+          id="benefits-parallax-tree"
         />
       </div>
-      <div class="benefits-camels">
+      <!-- <div class="benefits-camels">
         <img src="./images/benefits-camels.svg" alt="" id="benefits-camels" />
       </div> -->
       <div class="benefits-title">
@@ -444,35 +458,38 @@
         <div></div>
       </div>
       <h2 class="benefits-header">Benefits of having Habibi Token</h2>
-      <div class="accordions">
-        <div class="contentBox">
-          <div class="label">Efficient Fundraising for Charitable Causes</div>
-          <div class="content">
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error ab
-              culpa, doloremque eveniet labore laborum ipsam repudiandae ipsa
-              rem omnis.
-            </p>
+      <div class="container">
+        <div class="accordions">
+          <div class="contentBox">
+            <div class="label">Efficient Fundraising for Charitable Causes</div>
+            <div class="content">
+              <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error
+                ab culpa, doloremque eveniet labore laborum ipsam repudiandae
+                ipsa rem omnis.
+              </p>
+            </div>
           </div>
-        </div>
-        <div class="contentBox">
-          <div class="label">Unique and Meaningful Gifting</div>
-          <div class="content">
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error ab
-              culpa, doloremque eveniet labore laborum ipsam repudiandae ipsa
-              rem omnis.
-            </p>
+          <div class="contentBox">
+            <div class="label">Unique and Meaningful Gifting</div>
+
+            <div class="content">
+              <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error
+                ab culpa, doloremque eveniet labore laborum ipsam repudiandae
+                ipsa rem omnis.
+              </p>
+            </div>
           </div>
-        </div>
-        <div class="contentBox">
-          <div class="label">Low Transaction Fees</div>
-          <div class="content">
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error ab
-              culpa, doloremque eveniet labore laborum ipsam repudiandae ipsa
-              rem omnis.
-            </p>
+          <div class="contentBox">
+            <div class="label">Low Transaction Fees</div>
+            <div class="content">
+              <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error
+                ab culpa, doloremque eveniet labore laborum ipsam repudiandae
+                ipsa rem omnis.
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -602,6 +619,8 @@
     <!-- footer -->
 
     <!-- script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="./js/main.js"></script>

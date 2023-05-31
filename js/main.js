@@ -1,13 +1,67 @@
 // paralaax effect
 
-let aboutCloudLeft = document.getElementById('about-cloud-left');
-let aboutCloudRight = document.getElementById('about-cloud-right');
+gsap.to("#about-cloud-left", {
+    scrollTrigger: {
+        scrub: 2,
+    },
+    // scale: 2,
+    x: 4000
+});
 
-window.addEventListener('scroll', () => {
-    let value = window.scrollY;
+gsap.to("#roadmap-cloud-right", {
+    scrollTrigger: {
+        scrub: 2,
+    },
+    // scale: 2,
+    x: -2500
+});
 
-    aboutCloudLeft.style.left = value * 1 + 'px';
-    aboutCloudRight.style.right = value * 1 + 'px';
+gsap.to("#roadmap-cloud-left", {
+    scrollTrigger: {
+        scrub: 2,
+    },
+    // scale: 2,
+    x: 2500
+});
+
+gsap.to("#about-cloud-right", {
+    scrollTrigger: {
+        scrub: 2,
+    },
+    // scale: 2,
+    x: -4000
+});
+
+
+gsap.to("#feature-parallax-tree", {
+    scrollTrigger: {
+        scrub: 2,
+    },
+    // scale: 2,
+    y: 100
+});
+gsap.to("#feature-parallax-building", {
+    scrollTrigger: {
+        scrub: 2,
+    },
+    // scale: 2,
+    y: 100
+});
+
+
+gsap.to("#benefits-parallax-building", {
+    scrollTrigger: {
+        scrub: 2,
+    },
+    // scale: 2,
+    y: 150
+});
+gsap.to("#benefits-parallax-tree", {
+    scrollTrigger: {
+        scrub: 2,
+    },
+    // scale: 2,
+    y: 150
 });
 
 
