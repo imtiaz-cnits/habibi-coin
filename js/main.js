@@ -82,11 +82,37 @@ window.addEventListener('scroll', function(event) { // To listen for event
 
 // accordion
 
-const accordion = document.getElementsByClassName("contentBox");
+// const accordion = document.getElementsByClassName("contentBox");
 
-for (i = 0; i < accordion.length; i++) {
-    accordion[i].addEventListener('click', function(){
-        this.classList.toggle("active")
+// for (i = 0; i < accordion.length; i++) {
+//     accordion[i].addEventListener('click', function(){
+//         this.classList.toggle("active")
+//     });
+// }
+
+
+let toggles = document.getElementsByClassName('toggle');
+let contentDiv = document.getElementsByClassName('content');
+let icons = document.getElementsByClassName('icon');
+
+for (let i = 0; i < toggles.length; i++) {
+    toggles[i].addEventListener('click', () => {
+        if (parseInt(contentDiv[i].style.height) != contentDiv[i].scrollHeight) {
+            contentDiv[i].style.height = contentDiv[i].scrollHeight + "px";
+            icons[i].classList.remove('fa-plus');
+            icons[i].classList.add('fa-minus');
+        } else {
+            contentDiv[i].style.height = '0px';
+            icons[i].classList.add('fa-plus');
+            icons[i].classList.remove('fa-minus');
+        }
+        for (let j = 0; j < contentDiv.length; j++) {
+            if(j!==i) {
+                contentDiv[j].style.height = '0px';
+                icons[j].classList.add('fa-plus');
+                icons[j].classList.remove('fa-minus');
+            }           
+        }
     });
 }
 
@@ -166,10 +192,10 @@ const hoverLabel = {
             const textLabel = chart.config.data.labels[chart._active[0].index];
             console.log(chart.config.data.labels);
             const numberLabel = chart.config.data.datasets[chart._active[0].datasetIndex].data[chart._active[0].index];
-            // const color = chart.config.data.datasets[chart._active[0].datasetIndex].backgroundColor[chart._active[0].index];
+            const color = chart.config.data.datasets[chart._active[0].datasetIndex].backgroundColor[chart._active[0].index];
             
         ctx.font = 'bolder 20px Inknut Antiqua';
-        ctx.fillStyle = "#fff";
+        ctx.fillStyle = color;
         ctx.fillAlign = 'center';
         ctx.fillText(`${numberLabel}% ${textLabel}`, width / 4.2, height / 2 + top)
     }
@@ -210,4 +236,17 @@ const populateUl = () => {
     })
 }
 populateUl();
+
+
+// random genarate images
+
+let conclusionImage = document.getElementById('conclusionImages');
+let images = ['./images/conclusion-img-1.svg', './images/conclusion-img-2.svg', './images/conclusion-img-3.svg', './images/conclusion-img-4.svg'];
+
+setInterval(function() {
+    let rnd = Math.floor(Math.random() * images.length);
+    // for(let i of images.keys()) {
+    conclusionImage.src = images[rnd];
+    conclusionImage.style.transform = "scale(1) rotate(0deg";
+}, 2000);
 
