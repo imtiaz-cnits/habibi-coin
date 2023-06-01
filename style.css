@@ -64,7 +64,7 @@ body {
 .hero-bg-left {
   position: absolute;
   top: 300px;
-  left: -100px;
+  left: -200px;
   z-index: 111;
   width: 100%;
 }
@@ -72,13 +72,45 @@ body {
 .hero-bg-right {
   position: absolute;
   top: 350px;
-  right: -200px;
+  right: -250px;
   z-index: 1;
-  width: 100%;
+  width: 80%;
+}
+
+.moon {
+  position: absolute;
+  top: 30%;
+  left: 53%;
+  transform: translateX(-55%);
+  z-index: -1;
+}
+
+.moon img {
+  width: 80%;
+}
+
+.hero-cloud {
+  z-index: 9999 !important;
+}
+
+.hero-cloud img {
+  position: absolute;
+  pointer-events: none;
+  z-index: 9999 !important;
+}
+
+#hero-cloud-left {
+  left: 0px;
+  top: 200px;
+}
+
+#hero-cloud-right {
+  right: 0px;
+  top: 150px;
 }
 
 .navbar {
-  z-index: 9999 !important;
+  z-index: 999999 !important;
   transition: 0.5s;
 }
 
@@ -222,17 +254,6 @@ body {
   z-index: 9999 !important;
 }
 
-.moon {
-  position: absolute;
-  top: 50px;
-  left: 17%;
-  z-index: -1;
-}
-
-.moon img {
-  width: 80%;
-}
-
 .hero-text {
   position: absolute;
   left: 50%;
@@ -297,17 +318,71 @@ body {
   transform: translateY(-10px);
 }
 
+@media screen and (max-width: 1600px) {
+  /* .hero-bg .hero-bg-1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  pointer-events: none;
+  z-index: -999;
+} */
+
+  .hero-bg-center {
+    top: -0px;
+  }
+}
+
 @media screen and (max-width: 1400px) {
   .hero-text {
     height: 700px;
   }
-
-  .hero-camel-1 img {
-    width: 50%;
-  }
-
   .hero-bg-2 {
     top: 200px;
+  }
+
+  .hero-bg-left {
+    position: absolute;
+    top: 250px;
+    left: -200px;
+    z-index: 111;
+    width: 100%;
+  }
+
+  .hero-bg-right {
+    position: absolute;
+    top: 350px;
+    right: -250px;
+    z-index: 1;
+    width: 80%;
+  }
+
+  .moon {
+    position: absolute;
+    top: 30%;
+    left: 53%;
+    transform: translateX(-55%);
+    z-index: -1;
+  }
+
+  .moon img {
+    width: 80%;
+  }
+
+  .hero-cloud img {
+    position: absolute;
+    pointer-events: none;
+    z-index: -1;
+  }
+
+  #hero-cloud-left {
+    left: 0px;
+    top: 150px;
+  }
+
+  #hero-cloud-right {
+    right: 0px;
+    top: 150px;
   }
 }
 
@@ -325,25 +400,12 @@ body {
     font-size: 10px;
     transition: 0.5s;
   }
-
-  .hero-bg-center {
-    top: 0px;
-  }
-
-  .hero-bg-left {
-    top: 250px;
-    left: 300px;
-    width: 90%;
-  }
-
-  .hero-bg-right {
-    top: 250px;
-    right: 100px;
-    width: 90%;
-  }
 }
 
 @media screen and (max-width: 990px) {
+  .hero-cloud {
+    display: none;
+  }
   .navbar {
     background-color: var(--background-3rd);
   }
@@ -360,24 +422,16 @@ body {
     padding: 3px 25px;
   }
 
+  .moon img {
+    width: 60%;
+  }
+
   .hero-bg-left {
-    position: absolute;
-    top: 200px;
-    left: 320px;
-    z-index: 111;
-    width: 100%;
+    left: -80px;
   }
 
   .hero-bg-right {
-    position: absolute;
-    top: 200px;
-    right: 200px;
-    z-index: 1;
-    width: 100%;
-  }
-
-  .moon img {
-    width: 60%;
+    right: -100px;
   }
 }
 

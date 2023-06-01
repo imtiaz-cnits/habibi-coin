@@ -1,5 +1,46 @@
 // paralaax effect
 
+gsap.to("#hero-moon", {
+    scrollTrigger: {
+        scrub: 2,
+    },
+    scale: 15,
+    y: -800
+});
+
+gsap.to("#hero-desert-left", {
+    scrollTrigger: {
+        scrub: 2,
+    },
+    x: 600
+});
+
+gsap.to("#hero-desert-right", {
+    scrollTrigger: {
+        scrub: 2,
+    },
+    x: -600
+});
+
+gsap.to("#hero-cloud-left", {
+    scrollTrigger: {
+        scrub: 2,
+    },
+    scale: 15,
+    x: 4000
+});
+
+gsap.to("#hero-cloud-right", {
+    scrollTrigger: {
+        scrub: 2,
+    },
+    scale: 15,
+    y: -400,
+    x: -4000
+});
+
+// cloud parallax
+
 gsap.to("#about-cloud-left", {
     scrollTrigger: {
         scrub: 2,
@@ -226,10 +267,10 @@ const hoverLabel = {
             const textLabel = chart.config.data.labels[chart._active[0].index];
             console.log(chart.config.data.labels);
             const numberLabel = chart.config.data.datasets[chart._active[0].datasetIndex].data[chart._active[0].index];
-            const color = chart.config.data.datasets[chart._active[0].datasetIndex].backgroundColor[chart._active[0].index];
+            // const color = chart.config.data.datasets[chart._active[0].datasetIndex].backgroundColor[chart._active[0].index];
             
         ctx.font = 'bolder 20px Inknut Antiqua';
-        ctx.fillStyle = color;
+        ctx.fillStyle = "#ffffff";
         ctx.fillAlign = 'center';
         ctx.fillText(`${numberLabel}% ${textLabel}`, width / 4.2, height / 2 + top)
     }
