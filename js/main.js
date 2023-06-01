@@ -5,15 +5,15 @@ gsap.to("#about-cloud-left", {
         scrub: 2,
     },
     // scale: 2,
-    x: 4000
+    x: 3000
 });
 
-gsap.to("#roadmap-cloud-right", {
+gsap.to("#about-cloud-right", {
     scrollTrigger: {
         scrub: 2,
     },
     // scale: 2,
-    x: -2500
+    x: -3000
 });
 
 gsap.to("#roadmap-cloud-left", {
@@ -24,13 +24,47 @@ gsap.to("#roadmap-cloud-left", {
     x: 2500
 });
 
-gsap.to("#about-cloud-right", {
+gsap.to("#roadmap-cloud-right", {
+    scrollTrigger: {
+        scrub: 2,
+    },
+    // scale: 2,
+    x: -2500
+});
+
+gsap.to("#tockenomics-cloud-left", {
+    scrollTrigger: {
+        scrub: 2,
+    },
+    // scale: 2,
+    x: 2500
+});
+
+gsap.to("#tockenomics-cloud-right", {
+    scrollTrigger: {
+        scrub: 2,
+    },
+    // scale: 2,
+    x: -2500
+});
+
+gsap.to("#conclusion-cloud-left", {
+    scrollTrigger: {
+        scrub: 2,
+    },
+    // scale: 2,
+    x: 4000
+});
+
+gsap.to("#conclusion-cloud-right", {
     scrollTrigger: {
         scrub: 2,
     },
     // scale: 2,
     x: -4000
 });
+
+
 
 
 gsap.to("#feature-parallax-tree", {

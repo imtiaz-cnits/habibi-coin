@@ -267,6 +267,7 @@ body {
   color: var(--secondary-text);
   padding: 6px 30px;
   background: var(--button-accents);
+  border: 1px solid var(--button-accents);
   box-shadow: 0px 10px 40px rgba(255, 230, 0, 0.5),
     inset -4px -4px 12px rgba(0, 0, 0, 0.15),
     inset 4px 4px 8px rgba(255, 255, 255, 0.5);
@@ -276,6 +277,10 @@ body {
 
 .hero-btn a:hover {
   color: var(--secondary-text);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0px 15px 40px rgba(255, 230, 0, 0.7),
+    inset -4px -4px 12px rgba(0, 0, 0, 0.15),
+    inset 4px 4px 8px rgba(255, 255, 255, 0.5);
 }
 
 .hero-social-icons a {
@@ -630,6 +635,7 @@ body {
 .about-cloud img {
   position: absolute;
   pointer-events: none;
+  z-index: -1;
 }
 
 #about-cloud-left {
@@ -680,6 +686,10 @@ body {
 @media screen and (max-width: 990px) {
   #about {
     padding: 100px 0 0;
+  }
+
+  .about-cloud {
+    display: none;
   }
 
   .about-text p {
@@ -842,6 +852,10 @@ body {
   width: 30px;
 }
 
+.card-image .card-bottom-image.card-img-tree {
+  width: 40px;
+}
+
 @media screen and (max-width: 1800px) {
   .feature-camel-img img {
     width: 80%;
@@ -912,6 +926,7 @@ body {
 .roadmap-cloud img {
   position: absolute;
   pointer-events: none;
+  z-index: -1;
 }
 
 #roadmap-cloud-left {
@@ -1108,6 +1123,10 @@ body {
     padding: 0;
   }
 
+  .roadmap-cloud {
+    display: none;
+  }
+
   .roadmap-lesso-img {
     display: none;
   }
@@ -1273,6 +1292,7 @@ body {
 
 .toggle {
   width: 100%;
+  height: 80px;
   background-color: transparent;
   border: none;
   display: flex;
@@ -1308,6 +1328,24 @@ body {
 
 #tockenomics {
   padding: 100px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.tockenomics-cloud img {
+  position: absolute;
+  pointer-events: none;
+  z-index: -1;
+}
+
+#tockenomics-cloud-left {
+  left: -1300px;
+  top: 0;
+}
+
+#tockenomics-cloud-right {
+  right: -1300px;
+  bottom: 0;
 }
 
 .tockenomics-title {
@@ -1385,6 +1423,9 @@ body {
     display: block;
     padding: 20px 0px;
   }
+  .tockenomics-cloud {
+    display: none;
+  }
 
   /* .details {
     width: 400px;
@@ -1400,6 +1441,22 @@ body {
   position: relative;
   padding: 80px 0 200px;
   overflow: hidden;
+}
+
+.conclusion-cloud img {
+  position: absolute;
+  pointer-events: none;
+  z-index: -1;
+}
+
+#conclusion-cloud-left {
+  left: -2800px;
+  top: 100px;
+}
+
+#conclusion-cloud-right {
+  right: -2800px;
+  bottom: 100px;
 }
 
 .conclusion-title {
@@ -1468,8 +1525,32 @@ body {
 
 .conclusion-btn a:hover {
   color: var(--secondary-text);
-  border: 1px solid var(--white);
-  box-shadow: 0px 15px 40px rgba(255, 230, 0, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0px 15px 40px rgba(255, 230, 0, 0.7),
+    inset -4px -4px 12px rgba(0, 0, 0, 0.15),
+    inset 4px 4px 8px rgba(255, 255, 255, 0.5);
+}
+
+@media screen and (max-width: 990px) {
+  .conclusion-header {
+    text-align: center;
+    font-family: var(--secondary-font);
+    color: var(--white);
+    font-size: 1.4em;
+    margin-bottom: 50px;
+  }
+  .conclusion-cloud {
+    display: none;
+  }
+  .conclusion-image {
+    width: 330px;
+    height: 300px;
+    margin: 0 auto 30px;
+  }
+
+  .conclusion-btn {
+    text-align: center;
+  }
 }
 
 /* conclusion */
