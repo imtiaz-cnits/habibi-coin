@@ -245,8 +245,8 @@ let images = ['./images/conclusion-img-1.svg', './images/conclusion-img-2.svg', 
 
 setInterval(function() {
     let rnd = Math.floor(Math.random() * images.length);
-    // for(let i of images.keys()) {
     conclusionImage.src = images[rnd];
     conclusionImage.style.transform = "scale(1) rotate(0deg";
+
 }, 2000);
 

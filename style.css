@@ -1432,6 +1432,11 @@ body {
   margin-bottom: 50px;
 }
 
+.conclusion-image {
+  width: 450px;
+  height: 400px;
+}
+
 .conclusion-image img {
   width: 90%;
   transform: scale(0.2) rotate(90deg);
@@ -1479,12 +1484,6 @@ body {
   height: 800px;
   padding-top: 120px;
   position: relative;
-}
-
-.footer-moon {
-  position: absolute;
-  bottom: 350px;
-  right: 15%;
 }
 
 .footer-content h2 {
