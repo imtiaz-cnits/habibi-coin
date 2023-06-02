@@ -358,7 +358,7 @@ body {
 }
 @media screen and (max-width: 1600px) {
   #hero {
-    height: 90vh;
+    height: 100vh;
   }
 }
 
@@ -377,17 +377,17 @@ body {
   }
 
   .hero-bg-left {
-    top: 250px;
+    top: 200px;
     left: -150px;
   }
 
   .hero-bg-center {
-    top: 10px;
+    top: -10px;
     width: 100%;
   }
 
   .hero-bg-right {
-    top: 350px;
+    top: 250px;
     right: -250px;
   }
 
@@ -424,11 +424,23 @@ body {
 
 @media screen and (max-width: 1200px) {
   #hero {
-    height: 80vh;
+    height: 100vh;
   }
 
   .hero-text {
     width: 100%;
+  }
+
+  .hero-text h1 {
+    font-size: 2.3em;
+  }
+
+  .hero-btn {
+    margin: 40px 0px;
+  }
+
+  .hero-btn a {
+    padding: 3px 25px;
   }
 
   .moon img {
@@ -436,12 +448,18 @@ body {
   }
 
   .hero-bg-center {
-    top: 30px;
+    top: -30px;
     width: 100%;
   }
 
   .hero-bg-left {
+    top: 150px;
     left: -120px;
+  }
+
+  .hero-bg-right {
+    top: 200px;
+    right: -100px;
   }
 
   .navbar-nav li a {
@@ -453,7 +471,7 @@ body {
 
 @media screen and (max-width: 990px) {
   #hero {
-    height: 70vh;
+    height: 50vh;
   }
 
   .hero-cloud {
@@ -486,19 +504,19 @@ body {
   }
 
   .hero-bg-left {
-    top: 200px;
+    top: 170px;
     left: -80px;
   }
 
   .hero-bg-right {
-    top: 250px;
+    top: 210px;
     right: -100px;
   }
 }
 
 @media screen and (max-width: 768px) {
   #hero {
-    height: 50vh;
+    height: 60vh;
   }
 
   .hero-text {
@@ -510,7 +528,7 @@ body {
   }
 
   .hero-btn {
-    margin: 40px 0 50px;
+    margin: 30px 0 0;
   }
 
   .hero-btn a {
@@ -538,6 +556,11 @@ body {
     left: -80px;
   }
 
+  .hero-bg-center {
+    top: 10px;
+    width: 100%;
+  }
+
   .hero-bg-right {
     top: 200px;
     right: -100px;
@@ -550,7 +573,7 @@ body {
 
 @media screen and (max-width: 650px) {
   #hero {
-    height: 55vh;
+    height: 100vh;
   }
 
   .hero-bg-2 {
@@ -754,33 +777,21 @@ body {
   margin: 0 80px;
 }
 
-/* @media screen and (max-width: 2200px) {
-  #habibi-image-gallery {
-    margin-top: -300px;
-  }
-}
-
-@media screen and (max-width: 2000px) {
-  #habibi-image-gallery {
-    margin-top: -200px;
-  }
-}
-
-@media screen and (max-width: 1800px) {
-  #habibi-image-gallery {
-    margin-top: -300px;
-  }
-}
-
 @media screen and (max-width: 1600px) {
   #habibi-image-gallery {
-    margin-top: -200px;
+    margin-top: -150px;
   }
-} */
+}
+
+@media screen and (max-width: 1400px) {
+  #habibi-image-gallery {
+    margin-top: -100px;
+  }
+}
 
 @media screen and (max-width: 1200px) {
   #habibi-image-gallery {
-    margin-top: -180px;
+    margin-top: -100px;
   }
 
   .scroll-text-wrapper {
@@ -789,6 +800,10 @@ body {
 }
 
 @media screen and (max-width: 990px) {
+  #habibi-image-gallery {
+    margin-top: -180px;
+  }
+
   .gallery-content {
     display: grid;
     grid-gap: 5px;
@@ -804,7 +819,7 @@ body {
 
 @media screen and (max-width: 768px) {
   #habibi-image-gallery {
-    margin-top: -120px;
+    margin-top: -200px;
   }
 
   .scroll-text-wrapper {
@@ -813,10 +828,6 @@ body {
 }
 
 @media screen and (max-width: 650px) {
-  #habibi-image-gallery {
-    margin-top: -200px;
-  }
-
   .gallery-content img {
     width: 100%;
     padding: 3px 1px;
@@ -856,7 +867,7 @@ body {
 
 @media screen and (max-width: 550px) {
   #habibi-image-gallery {
-    margin-top: -220px;
+    margin-top: -80px;
     padding: 70px 0 0 0;
   }
 
@@ -867,7 +878,19 @@ body {
 
 @media screen and (max-width: 420px) {
   #habibi-image-gallery {
-    margin-top: -180px;
+    margin-top: -150px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  #habibi-image-gallery {
+    margin-top: -120px;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  #habibi-image-gallery {
+    margin-top: -80px;
   }
 }
 
@@ -1745,7 +1768,7 @@ body {
 
 #conclusion-cloud-right {
   right: -2800px;
-  bottom: 100px;
+  bottom: 20px;
 }
 
 .conclusion-title {
@@ -1960,6 +1983,12 @@ body {
   font-weight: 600;
   animation: footerScrollText 20s linear infinite;
   animation-delay: -40s;
+}
+
+.footer-wrapper {
+  width: 100%;
+  overflow: hidden;
+  padding-top: 130px;
 }
 
 @keyframes footerScrollText {
