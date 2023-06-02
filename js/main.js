@@ -26,17 +26,14 @@ gsap.to("#hero-cloud-left", {
     scrollTrigger: {
         scrub: 2,
     },
-    scale: 15,
-    x: 4000
+    x: 5000
 });
 
 gsap.to("#hero-cloud-right", {
     scrollTrigger: {
         scrub: 2,
     },
-    scale: 15,
-    y: -400,
-    x: -4000
+    x: -5000
 });
 
 // cloud parallax
@@ -138,6 +135,23 @@ gsap.to("#benefits-parallax-tree", {
     // scale: 2,
     y: 150
 });
+
+
+gsap.to("#benefits-camels", {
+    scrollTrigger: {
+        scrub: 2,
+    },
+    // scale: 2,
+    x: -2000
+});
+gsap.to("#feature-camels", {
+    scrollTrigger: {
+        scrub: 2,
+    },
+    // scale: 2,
+    x: 1000
+});
+
 
 
 // navbar scroll to color change
@@ -303,14 +317,14 @@ const mycharts = new Chart(
     config
 ); 
 
-const populateUl = () => {
-    chartData.labels.forEach((l, i) => {
-        let li = document.createElement("li");
-        li.innerHTML = `${l} - <span class='percentage'>${chartData.data[i]}%</span>`; 
-        ul.appendChild(li);
-    })
-}
-populateUl();
+// const populateUl = () => {
+//     chartData.labels.forEach((l, i) => {
+//         let li = document.createElement("li");
+//         li.innerHTML = `${l} - <span class='percentage'>${chartData.data[i]}%</span>`; 
+//         ul.appendChild(li);
+//     })
+// }
+// populateUl();
 
 
 // random genarate images
