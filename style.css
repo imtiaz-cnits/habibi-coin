@@ -104,6 +104,7 @@ body {
 
 .moon img {
   width: 80%;
+  pointer-events: none;
 }
 
 .hero-cloud {
@@ -119,11 +120,13 @@ body {
 #hero-cloud-left {
   left: 0px;
   top: 200px;
+  pointer-events: none;
 }
 
 #hero-cloud-right {
   right: 0px;
   top: 150px;
+  pointer-events: none;
 }
 
 .navbar {
@@ -288,7 +291,7 @@ body {
   transform: translateX(-50%);
   margin-top: 150px;
   text-align: center;
-  z-index: 999 !important;
+  z-index: 9999 !important;
 }
 
 .hero-text h1 {
@@ -802,6 +805,7 @@ body {
 
 .scroll-text img {
   margin: 0 80px;
+  pointer-events: none;
 }
 
 @media screen and (max-width: 1600px) {
@@ -936,6 +940,7 @@ body {
   position: absolute;
   pointer-events: none;
   z-index: -1;
+  pointer-events: none;
 }
 
 #about-cloud-left {
@@ -1023,6 +1028,7 @@ body {
 .feature-camels {
   text-align: center;
   padding-right: 100%;
+  pointer-events: none;
 }
 
 .feature-image {
@@ -1036,6 +1042,7 @@ body {
   left: 18%;
   transform: translateX(-50%);
   z-index: -1;
+  pointer-events: none;
 }
 
 .feature-building {
@@ -1044,6 +1051,7 @@ body {
   right: 18%;
   transform: translateX(-50%);
   z-index: -1;
+  pointer-events: none;
 }
 
 .feature-title {
@@ -1120,6 +1128,7 @@ body {
   width: 50px;
   animation: bounchOpacity 4s alternate infinite;
   transition: 0.5s;
+  pointer-events: none;
 }
 
 @keyframes bounchOpacity {
@@ -1284,6 +1293,7 @@ body {
 .roadmap-lesso-img img {
   width: 100%;
   height: 1300px;
+  pointer-events: none;
 }
 
 .roadmap-timeline {
@@ -1301,6 +1311,7 @@ body {
 
 .roadmap-line img {
   width: 90px;
+  pointer-events: none;
 }
 
 .roadmap-timeline .roadmap-ul {
@@ -1533,6 +1544,7 @@ body {
 .benefits-camels {
   text-align: center;
   padding-left: 100%;
+  pointer-events: none;
 }
 
 .benefits-parallax-building {
@@ -1540,6 +1552,7 @@ body {
   left: 15%;
   z-index: -1;
   top: -70px;
+  pointer-events: none;
 }
 
 .benefits-parallax-tree {
@@ -1547,6 +1560,7 @@ body {
   right: 25%;
   z-index: -1;
   top: -70px;
+  pointer-events: none;
 }
 
 .benefits-title {
@@ -1918,6 +1932,7 @@ body {
 
 .footer-stars img {
   position: absolute;
+  pointer-events: none;
   animation: starRotate 4s linear infinite;
 }
 
@@ -2106,6 +2121,7 @@ body {
 
 .footer-scroll-text img {
   margin: 0 80px;
+  pointer-events: none;
 }
 
 @media screen and (max-width: 2000px) {
