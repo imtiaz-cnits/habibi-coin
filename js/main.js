@@ -1,156 +1,33 @@
 // paralaax effect
 
-gsap.to("#hero-moon", {
+
+gsap.fromTo("#hero-left-bird", { opacity: 1 }, {
+    y: -800,
+    x: 2000,
+    ease: "power2.out",
     scrollTrigger: {
-        scrub: 2,
-    },
-    scale: 15,
-    y: -800
-});
+        trigger: ".scrollElement",
+        start: "0% top",
+        end: "30% 100%",
+        scrub: 4,
+        onEnter: function() { gsap.to("#hero-left-bird", { scaleX: 1, rotation: 0 }) },
+        onLeave: function() { gsap.to("#hero-left-bird", { scaleX: -1, rotation: -15 }) },
+    }
+})
 
-gsap.to("#hero-desert-left", {
+gsap.fromTo("#hero-right-bird", { opacity: 1 }, {
+    y: 800,
+    x: -2500,
+    ease: "power2.out",
     scrollTrigger: {
-        scrub: 2,
-    },
-    x: 600
-});
-
-gsap.to("#hero-desert-right", {
-    scrollTrigger: {
-        scrub: 2,
-    },
-    x: -600
-});
-
-gsap.to("#hero-cloud-left", {
-    scrollTrigger: {
-        scrub: 2,
-    },
-    x: 5000
-});
-
-gsap.to("#hero-cloud-right", {
-    scrollTrigger: {
-        scrub: 2,
-    },
-    x: -5000
-});
-
-// cloud parallax
-
-gsap.to("#about-cloud-left", {
-    scrollTrigger: {
-        scrub: 2,
-    },
-    // scale: 2,
-    x: 3000
-});
-
-gsap.to("#about-cloud-right", {
-    scrollTrigger: {
-        scrub: 2,
-    },
-    // scale: 2,
-    x: -3000
-});
-
-gsap.to("#roadmap-cloud-left", {
-    scrollTrigger: {
-        scrub: 2,
-    },
-    // scale: 2,
-    x: 2500
-});
-
-gsap.to("#roadmap-cloud-right", {
-    scrollTrigger: {
-        scrub: 2,
-    },
-    // scale: 2,
-    x: -2500
-});
-
-gsap.to("#tockenomics-cloud-left", {
-    scrollTrigger: {
-        scrub: 2,
-    },
-    // scale: 2,
-    x: 2500
-});
-
-gsap.to("#tockenomics-cloud-right", {
-    scrollTrigger: {
-        scrub: 2,
-    },
-    // scale: 2,
-    x: -2500
-});
-
-gsap.to("#conclusion-cloud-left", {
-    scrollTrigger: {
-        scrub: 2,
-    },
-    // scale: 2,
-    x: 4000
-});
-
-gsap.to("#conclusion-cloud-right", {
-    scrollTrigger: {
-        scrub: 2,
-    },
-    // scale: 2,
-    x: -4000
-});
-
-
-
-
-gsap.to("#feature-parallax-tree", {
-    scrollTrigger: {
-        scrub: 2,
-    },
-    // scale: 2,
-    y: 100
-});
-gsap.to("#feature-parallax-building", {
-    scrollTrigger: {
-        scrub: 2,
-    },
-    // scale: 2,
-    y: 100
-});
-
-
-gsap.to("#benefits-parallax-building", {
-    scrollTrigger: {
-        scrub: 2,
-    },
-    // scale: 2,
-    y: 150
-});
-gsap.to("#benefits-parallax-tree", {
-    scrollTrigger: {
-        scrub: 2,
-    },
-    // scale: 2,
-    y: 150
-});
-
-
-gsap.to("#benefits-camels", {
-    scrollTrigger: {
-        scrub: 2,
-    },
-    // scale: 2,
-    x: -2000
-});
-gsap.to("#feature-camels", {
-    scrollTrigger: {
-        scrub: 2,
-    },
-    // scale: 2,
-    x: 1000
-});
+        trigger: ".scrollElement",
+        start: "0% top",
+        end: "30% 100%",
+        scrub: 4,
+        onEnter: function() { gsap.to("#hero-right-bird", { scaleX: 1, rotation: 0 }) },
+        onLeave: function() { gsap.to("#hero-right-bird", { scaleX: -1, rotation: -15 }) },
+    }
+})
 
 
 
@@ -160,7 +37,7 @@ var nav = document.querySelector('.navbar'); // Identify target
 window.addEventListener('scroll', function(event) { // To listen for event
     event.preventDefault();
 
-    if (window.scrollY >= 150) { // Just an example
+    if (window.scrollY >= 2900) { // Just an example
         nav.style.backgroundColor = '#bc603b'; // or default color
     } else {
         nav.style.backgroundColor = 'transparent';
