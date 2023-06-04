@@ -52,7 +52,86 @@ body {
   margin: auto;
 }
 
+<<<<<<< HEAD
 /* navbar */
+=======
+/* hero */
+
+#hero {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.hero-bg .hero-bg-1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  pointer-events: none;
+  z-index: -999;
+}
+
+.hero-bg-center {
+  position: absolute;
+  top: -170px;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  width: 100%;
+}
+
+.hero-bg-left {
+  position: absolute;
+  top: 300px;
+  left: -200px;
+  z-index: 111;
+  width: 80%;
+}
+
+.hero-bg-right {
+  position: absolute;
+  top: 350px;
+  right: -250px;
+  z-index: 1;
+  width: 80%;
+}
+
+.moon {
+  position: absolute;
+  top: 30%;
+  left: 53%;
+  transform: translateX(-55%);
+  z-index: -1;
+}
+
+.moon img {
+  width: 80%;
+  pointer-events: none;
+}
+
+.hero-cloud {
+  z-index: 9999 !important;
+}
+
+.hero-cloud img {
+  position: absolute;
+  pointer-events: none;
+  z-index: 9999 !important;
+}
+
+#hero-cloud-left {
+  left: 0px;
+  top: 200px;
+  pointer-events: none;
+}
+
+#hero-cloud-right {
+  right: 0px;
+  top: 150px;
+  pointer-events: none;
+}
+>>>>>>> main
 
 .navbar {
   z-index: 999999 !important;
@@ -313,7 +392,11 @@ body {
   transform: translateX(-50%);
   width: 100%;
   text-align: center;
+<<<<<<< HEAD
   z-index: 9;
+=======
+  z-index: 9999 !important;
+>>>>>>> main
 }
 
 .hero-text h1 {
@@ -482,6 +565,7 @@ body {
 
 .scroll-text img {
   margin: 0 80px;
+  pointer-events: none;
 }
 
 @media screen and (max-width: 1600px) {
@@ -617,7 +701,12 @@ body {
 .about-cloud img {
   position: absolute;
   pointer-events: none;
+<<<<<<< HEAD
   z-index: 9;
+=======
+  z-index: -1;
+  pointer-events: none;
+>>>>>>> main
 }
 
 #about-cloud-left {
@@ -706,6 +795,7 @@ body {
 .feature-camels {
   text-align: center;
   padding-right: 100%;
+  pointer-events: none;
 }
 
 .feature-image {
@@ -719,6 +809,7 @@ body {
   left: 18%;
   transform: translateX(-50%);
   z-index: -1;
+  pointer-events: none;
 }
 
 .feature-building {
@@ -727,6 +818,7 @@ body {
   right: 18%;
   transform: translateX(-50%);
   z-index: -1;
+  pointer-events: none;
 }
 
 .feature-title {
@@ -803,6 +895,7 @@ body {
   width: 50px;
   animation: bounchOpacity 4s alternate infinite;
   transition: 0.5s;
+  pointer-events: none;
 }
 
 @keyframes bounchOpacity {
@@ -968,6 +1061,7 @@ body {
 .roadmap-lesso-img img {
   width: 100%;
   height: 1300px;
+  pointer-events: none;
 }
 
 .roadmap-timeline {
@@ -985,6 +1079,7 @@ body {
 
 .roadmap-line img {
   width: 90px;
+  pointer-events: none;
 }
 
 .roadmap-timeline .roadmap-ul {
@@ -1218,6 +1313,7 @@ body {
 .benefits-camels {
   text-align: center;
   padding-left: 100%;
+  pointer-events: none;
 }
 
 .benefits-parallax-building {
@@ -1225,6 +1321,7 @@ body {
   left: 15%;
   z-index: -1;
   top: -70px;
+  pointer-events: none;
 }
 
 .benefits-parallax-tree {
@@ -1232,6 +1329,7 @@ body {
   right: 25%;
   z-index: -1;
   top: -70px;
+  pointer-events: none;
 }
 
 .benefits-title {
@@ -1655,6 +1753,7 @@ body {
 
 .footer-stars img {
   position: absolute;
+  pointer-events: none;
   animation: starRotate 4s linear infinite;
 }
 
@@ -1837,6 +1936,7 @@ body {
 
 .footer-scroll-text img {
   margin: 0 80px;
+  pointer-events: none;
 }
 
 @media screen and (max-width: 2000px) {
