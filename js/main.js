@@ -1,6 +1,4 @@
 // paralaax effect
-
-
 gsap.fromTo("#hero-left-bird", { opacity: 1 }, {
     y: -800,
     x: 2000,
@@ -29,6 +27,45 @@ gsap.fromTo("#hero-right-bird", { opacity: 1 }, {
     }
 })
 
+gsap.fromTo("#hero-moon", { opacity: 1 }, {
+    y: -300,
+    scale: 6,
+    ease: "power2.out",
+    scrollTrigger: {
+        trigger: ".scrollElement",
+        start: "10% top",
+        end: "30% 100%",
+        scrub: 4,
+    }
+})
+
+
+gsap.fromTo("#hero-cloud-left", { opacity: 1 }, {
+    x: 500,
+    y: 200,
+    scale: 5,
+    ease: "power2.out",
+    scrollTrigger: {
+        trigger: ".scrollElement",
+        start: "20% top",
+        end: "30% 100%",
+        scrub: 4,
+    }
+})
+
+gsap.fromTo("#hero-cloud-right", { opacity: 1 }, {
+    x: -500,
+    y: 200,
+    scale: 5,
+    ease: "power2.out",
+    scrollTrigger: {
+        trigger: ".scrollElement",
+        start: "20% top",
+        end: "30% 100%",
+        scrub: 4,
+    }
+})
+
 
 
 // navbar scroll to color change
@@ -37,7 +74,7 @@ var nav = document.querySelector('.navbar'); // Identify target
 window.addEventListener('scroll', function(event) { // To listen for event
     event.preventDefault();
 
-    if (window.scrollY >= 2900) { // Just an example
+    if (window.scrollY >= 4450) { // Just an example
         nav.style.backgroundColor = '#bc603b'; // or default color
     } else {
         nav.style.backgroundColor = 'transparent';

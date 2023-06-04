@@ -34,19 +34,6 @@ body {
   display: none;
 }
 
-/* ::-webkit-scrollbar-track {
-  background-color: #ff8e31d4;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #d9501c;
-  border-radius: 5px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #bc603b;
-} */
-
 .containers {
   width: 85%;
   margin: auto;
@@ -290,7 +277,7 @@ body {
 
 #hero {
   position: relative;
-  height: 6000px;
+  height: 4500px;
   overflow: hidden;
 }
 
@@ -339,7 +326,7 @@ body {
 
 .moon {
   position: absolute;
-  top: 30%;
+  top: 50%;
   left: 53%;
   transform: translateX(-55%);
   z-index: -1;
@@ -351,16 +338,15 @@ body {
 
 .hero-cloud img {
   position: absolute;
-  z-index: 9999999 !important;
 }
 
 #hero-cloud-left {
-  left: 0px;
+  left: -400px;
   top: 200px;
 }
 
 #hero-cloud-right {
-  right: 0px;
+  right: -400px;
   top: 150px;
 }
 
@@ -368,7 +354,6 @@ body {
 
 .hero-bird img {
   position: absolute;
-  z-index: 999999 !important;
 }
 
 #hero-left-bird {
@@ -377,7 +362,7 @@ body {
 }
 
 #hero-right-bird {
-  top: 0px;
+  top: 100px;
   right: -150px;
 }
 
@@ -397,6 +382,7 @@ body {
   color: var(--white);
   font-size: 3em;
 }
+
 .hero-text h1 span {
   color: var(--button-accents);
 }
@@ -451,25 +437,150 @@ body {
   }
 }
 
+@media screen and (max-width: 1800px) {
+  .hero-bg-left {
+    left: -50px;
+  }
+}
+
 @media screen and (max-width: 1400px) {
+  .hero-bg-center {
+    top: 0px;
+  }
+
+  .hero-bg-left {
+    bottom: -100px;
+    left: -40px;
+  }
+
+  .hero-bg-right {
+    bottom: -50px;
+    right: -100px;
+  }
 }
 
 @media screen and (max-width: 1200px) {
+  .hero-bg-center {
+    top: 30px;
+  }
+
+  .hero-bg-left {
+    bottom: -200px;
+    left: -40px;
+  }
+
+  .hero-bg-right {
+    position: absolute;
+    bottom: -150px;
+    right: -100px;
+  }
 }
 
-@media screen and (max-width: 990px) {
+@media screen and (max-width: 1050px) {
+  .moon {
+    top: 70%;
+  }
+
+  .hero-bg-center {
+    top: 220px;
+  }
+
+  .hero-bg-left {
+    top: 450px;
+    left: -40px;
+  }
+
+  .hero-bg-right {
+    top: 450px;
+    right: -100px;
+  }
+
+  .hero-text h1 {
+    font-size: 2.5em;
+  }
 }
 
 @media screen and (max-width: 768px) {
+  .hero-bg-center {
+    top: 300px;
+  }
+
+  .hero-bg-left {
+    top: 500px;
+    left: -40px;
+  }
+
+  .hero-bg-right {
+    top: 520px;
+    right: -100px;
+  }
+
+  .hero-text h1 {
+    font-size: 2em;
+  }
 }
 
 @media screen and (max-width: 650px) {
+  .hero-bg-center {
+    top: 450px;
+  }
+
+  .hero-bg-left {
+    top: 600px;
+    left: -40px;
+  }
+
+  .hero-bg-right {
+    top: 620px;
+    right: -100px;
+  }
+
+  .hero-text h1 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+  }
+
+  .hero-text p {
+    font-size: 12px;
+  }
+
+  .hero-btn {
+    margin: 40px 0 50px;
+  }
+
+  .hero-btn a {
+    padding: 3px 15px;
+  }
 }
 
-@media screen and (max-width: 555px) {
+@media screen and (max-width: 520px) {
+  .hero-bg-center {
+    top: 500px;
+  }
+
+  .hero-text h1 {
+    font-size: 1.5em;
+  }
 }
 
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 450px) {
+  .hero-bg-center {
+    top: 550px;
+  }
+
+  .hero-bg-left {
+    top: 650px;
+    left: -20px;
+  }
+
+  .hero-bg-right {
+    top: 670px;
+    right: -50px;
+  }
+
+  .hero-text h1 {
+    font-size: 1.3em;
+  }
 }
 
 /* hero */
@@ -565,11 +676,19 @@ body {
   #habibi-image-gallery {
     margin-top: -150px;
   }
+
+  .scroll-text-wrapper {
+    margin-bottom: 40px;
+  }
 }
 
 @media screen and (max-width: 1400px) {
   #habibi-image-gallery {
     margin-top: -100px;
+  }
+
+  .scroll-text-wrapper {
+    margin-bottom: 35px;
   }
 }
 
@@ -598,6 +717,10 @@ body {
   .navbar {
     background-color: #bc603b !important;
     padding: 0 !important;
+  }
+
+  .scroll-text-wrapper {
+    margin-bottom: 25px;
   }
 }
 
@@ -670,6 +793,10 @@ body {
   #habibi-image-gallery {
     margin-top: -120px;
   }
+
+  .scroll-text-wrapper {
+    margin-bottom: 10px;
+  }
 }
 
 @media screen and (max-width: 380px) {
@@ -685,7 +812,7 @@ body {
 #about {
   z-index: 100 !important;
   margin-top: -100px;
-  padding: 150px 0;
+  padding: 150px 0 0;
   position: relative;
   overflow: hidden;
   background-color: var(--background);
@@ -972,7 +1099,7 @@ body {
 @media screen and (max-width: 990px) {
   #feature {
     padding: 0 0 100px;
-    background: none;
+    /* background-image: none; */
   }
 
   .feature-camels {
@@ -1194,7 +1321,7 @@ body {
 
 @media screen and (max-width: 990px) {
   #roadmap {
-    padding: 0;
+    padding-bottom: 0;
   }
 
   .roadmap-cloud {
@@ -1301,7 +1428,7 @@ body {
 
 .benefits-camels {
   text-align: center;
-  padding-left: 100%;
+  /* padding-left: 100%; */
   pointer-events: none;
 }
 
@@ -1699,7 +1826,7 @@ body {
 
 @media screen and (max-width: 990px) {
   #conclusion {
-    padding: 80px 0 100px;
+    padding: 100px 0 200px;
   }
 
   .conclusion-header {
