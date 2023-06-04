@@ -52,9 +52,6 @@ body {
   margin: auto;
 }
 
-<<<<<<< HEAD
-/* navbar */
-=======
 /* hero */
 
 #hero {
@@ -131,7 +128,6 @@ body {
   top: 150px;
   pointer-events: none;
 }
->>>>>>> main
 
 .navbar {
   z-index: 999999 !important;
@@ -388,15 +384,12 @@ body {
 /* hero content */
 
 .hero-text {
-  position: absolute;
-  transform: translateX(-50%);
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   width: 100%;
   text-align: center;
-<<<<<<< HEAD
-  z-index: 9;
-=======
-  z-index: 9999 !important;
->>>>>>> main
 }
 
 .hero-text h1 {
@@ -701,12 +694,8 @@ body {
 .about-cloud img {
   position: absolute;
   pointer-events: none;
-<<<<<<< HEAD
   z-index: 9;
-=======
-  z-index: -1;
   pointer-events: none;
->>>>>>> main
 }
 
 #about-cloud-left {
