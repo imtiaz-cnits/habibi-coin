@@ -27,6 +27,28 @@ gsap.fromTo("#hero-right-bird", { opacity: 1 }, {
     }
 })
 
+gsap.fromTo("#hero-desert-left", { opacity: 1 }, {
+    x: 100,
+    ease: "power2.out",
+    scrollTrigger: {
+        trigger: ".scrollElement",
+        start: "10% top",
+        end: "50% 100%",
+        scrub: 4,
+    }
+})
+
+gsap.fromTo("#hero-desert-right", { opacity: 1 }, {
+    x: -100,
+    ease: "power2.out",
+    scrollTrigger: {
+        trigger: ".scrollElement",
+        start: "10% top",
+        end: "50% 100%",
+        scrub: 4,
+    }
+})
+
 gsap.fromTo("#hero-moon", { opacity: 1 }, {
     y: -300,
     scale: 6,

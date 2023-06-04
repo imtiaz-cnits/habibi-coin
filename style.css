@@ -443,6 +443,18 @@ body {
   }
 }
 
+/* @media screen and (max-width: 1600px) {
+  .hero-bg-left {
+    bottom: -100px;
+    left: -30px;
+  }
+
+  .hero-bg-right {
+    bottom: -50px;
+    right: -100px;
+  }
+} */
+
 @media screen and (max-width: 1400px) {
   .hero-bg-center {
     top: 0px;
@@ -450,7 +462,7 @@ body {
 
   .hero-bg-left {
     bottom: -100px;
-    left: -40px;
+    left: -60px;
   }
 
   .hero-bg-right {
@@ -466,7 +478,7 @@ body {
 
   .hero-bg-left {
     bottom: -200px;
-    left: -40px;
+    left: -60px;
   }
 
   .hero-bg-right {
@@ -906,6 +918,7 @@ body {
   padding: 100px 0;
   overflow: hidden;
   background-color: var(--background);
+  z-index: 1;
 }
 
 .feature-camels {
@@ -916,24 +929,24 @@ body {
 
 .feature-image {
   position: absolute;
-  z-index: -1;
+  z-index: 1;
 }
 
 .feature-dates-tree-img {
   position: absolute;
-  top: 3%;
+  /* top: 3%; */
   left: 18%;
   transform: translateX(-50%);
-  z-index: -1;
+  z-index: 2;
   pointer-events: none;
 }
 
 .feature-building {
   position: absolute;
-  top: 2%;
+  /* top: 2%; */
   right: 18%;
   transform: translateX(-50%);
-  z-index: -1;
+  z-index: 2;
   pointer-events: none;
 }
 
