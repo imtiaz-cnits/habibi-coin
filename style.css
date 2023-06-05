@@ -1922,6 +1922,12 @@ body {
   background-color: var(--background);
 }
 
+.footer-wrapper {
+  overflow: hidden;
+  padding-top: 120px;
+  margin-top: -100px;
+}
+
 .footer-stars img {
   position: absolute;
   pointer-events: none;
