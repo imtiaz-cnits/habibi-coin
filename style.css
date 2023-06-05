@@ -41,100 +41,7 @@ body {
 
 /* hero */
 
-#hero {
-  position: relative;
-  height: 100vh;
-  overflow: hidden;
-}
-
-.hero-bg .hero-bg-1 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  pointer-events: none;
-  z-index: -999;
-}
-
-.hero-bg .hero-bg-2 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  pointer-events: none;
-  display: none;
-  z-index: -999;
-}
-
-.hero-bg .hero-bg-3 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  pointer-events: none;
-  display: none;
-  z-index: -999;
-}
-
-#hero-bg-center {
-  position: absolute;
-  top: -70px;
-  left: 0;
-  right: 0;
-  z-index: -1;
-  width: 100%;
-}
-
-#hero-desert-left {
-  position: absolute;
-  top: 400px;
-  left: -150px;
-  z-index: 111;
-  width: 80%;
-}
-
-#hero-desert-right {
-  position: absolute;
-  top: 550px;
-  right: -250px;
-  z-index: 1;
-  width: 80%;
-}
-
-.moon {
-  position: absolute;
-  top: 30%;
-  left: 53%;
-  transform: translateX(-55%);
-  z-index: -1;
-}
-
-.moon img {
-  width: 80%;
-  pointer-events: none;
-}
-
-.hero-cloud {
-  z-index: 9999 !important;
-}
-
-.hero-cloud img {
-  position: absolute;
-  pointer-events: none;
-  z-index: 9999 !important;
-}
-
-#hero-cloud-left {
-  left: 0px;
-  top: 200px;
-  pointer-events: none;
-}
-
-#hero-cloud-right {
-  right: 0px;
-  top: 150px;
-  pointer-events: none;
-}
+/* navbar */
 
 .navbar {
   z-index: 999999 !important;
@@ -297,7 +204,7 @@ body {
 
 #hero {
   position: relative;
-  height: 4500px;
+  height: 4300px;
   overflow: hidden;
 }
 
@@ -319,26 +226,46 @@ body {
   z-index: -999;
 }
 
-.hero-bg-center {
+.hero-bg .hero-bg-2 {
   position: absolute;
-  top: -150px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  pointer-events: none;
+  display: none;
+  z-index: -999;
+}
+
+.hero-bg .hero-bg-3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  pointer-events: none;
+  display: none;
+  z-index: -999;
+}
+
+#hero-bg-center {
+  position: absolute;
+  top: -70px;
   left: 0;
   right: 0;
   z-index: -1;
   width: 100%;
 }
 
-.hero-bg-left {
+#hero-desert-left {
   position: absolute;
-  top: 300px;
-  left: -200px;
+  top: 400px;
+  left: -150px;
   z-index: 111;
   width: 80%;
 }
 
-.hero-bg-right {
+#hero-desert-right {
   position: absolute;
-  top: 350px;
+  top: 550px;
   right: -250px;
   z-index: 1;
   width: 80%;
@@ -346,7 +273,7 @@ body {
 
 .moon {
   position: absolute;
-  top: 50%;
+  top: 30%;
   left: 53%;
   transform: translateX(-55%);
   z-index: -1;
@@ -354,10 +281,13 @@ body {
 
 .moon img {
   width: 80%;
+  pointer-events: none;
 }
 
 .hero-cloud img {
   position: absolute;
+  pointer-events: none;
+  z-index: 9999 !important;
 }
 
 #hero-cloud-left {
@@ -880,14 +810,32 @@ body {
 }
 
 #about-cloud-left {
-  left: -800px;
+  left: -380px;
   bottom: 0;
 }
 
 #about-cloud-right {
-  right: -800px;
+  right: -380px;
   top: 0;
 }
+
+/* hero bird */
+
+.about-bird img {
+  position: absolute;
+}
+
+#about-left-bird {
+  bottom: 100px;
+  left: -150px;
+}
+
+#about-right-bird {
+  top: 100px;
+  right: -150px;
+}
+
+/* About Content */
 
 .about-header {
   display: flex;
@@ -965,8 +913,14 @@ body {
 
 .feature-camels {
   text-align: center;
-  padding-right: 100%;
+  /* padding-right: 100%; */
   pointer-events: none;
+}
+
+.feature-camels img {
+  width: 70%;
+  display: block;
+  margin: auto;
 }
 
 .feature-image {
@@ -1177,6 +1131,7 @@ body {
   background-color: var(--background);
 }
 
+/* roadmap cloud */
 .roadmap-cloud img {
   position: absolute;
   pointer-events: none;
@@ -1184,13 +1139,28 @@ body {
 }
 
 #roadmap-cloud-left {
-  left: -800px;
-  bottom: 0;
+  left: -400px;
+  bottom: 200px;
 }
 
 #roadmap-cloud-right {
-  right: -800px;
-  top: 0;
+  right: -400px;
+  top: 200px;
+}
+
+/* roadmap bird */
+.roadmap-bird img {
+  position: absolute;
+}
+
+#roadmap-left-bird {
+  bottom: 300px;
+  left: -150px;
+}
+
+#roadmap-right-bird {
+  top: 100px;
+  right: -150px;
 }
 
 .roadmap-title {
@@ -1483,26 +1453,14 @@ body {
 
 .benefits-camels {
   text-align: center;
-  /* padding-left: 100%; */
   pointer-events: none;
 }
 
-.benefits-parallax-building {
-  position: absolute;
-  left: 15%;
-  z-index: -1;
-  top: -70px;
-  pointer-events: none;
+.benefits-camels img {
+  width: 70%;
 }
 
-.benefits-parallax-tree {
-  position: absolute;
-  right: 25%;
-  z-index: -1;
-  top: -70px;
-  pointer-events: none;
-}
-
+/* benefits content */
 .benefits-title {
   display: flex;
   align-items: center;
@@ -1673,6 +1631,23 @@ body {
   bottom: 0;
 }
 
+/* tockenomics animal */
+.chart-bg-animal img {
+  position: absolute;
+  animation: bounchOpacity 4s alternate infinite;
+}
+
+#chart-camel {
+  bottom: 0;
+  left: 30px;
+}
+
+#chart-bird {
+  top: 30px;
+  right: 30px;
+}
+
+/* ockenomics content */
 .tockenomics-title {
   display: flex;
   align-items: center;
@@ -1709,13 +1684,17 @@ body {
   justify-content: center;
 }
 
+.chart-wrapper {
+  position: relative;
+  background-color: var(--background-2nd);
+  padding: 50px 80px;
+  border-radius: 8px;
+}
+
 .chart-stats {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  background-color: var(--background-2nd);
-  padding: 50px 80px;
-  border-radius: 8px;
 }
 
 .details {

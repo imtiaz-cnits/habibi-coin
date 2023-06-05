@@ -51,7 +51,7 @@ gsap.fromTo("#hero-desert-right", { opacity: 1 }, {
 
 gsap.fromTo("#hero-moon", { opacity: 1 }, {
     y: -300,
-    scale: 6,
+    scale: 5,
     ease: "power2.out",
     scrollTrigger: {
         trigger: ".scrollElement",
@@ -87,6 +87,145 @@ gsap.fromTo("#hero-cloud-right", { opacity: 1 }, {
         scrub: 4,
     }
 })
+
+// about parallax
+
+gsap.fromTo("#about-left-bird", { opacity: 1 }, {
+    y: -300,
+    x: 1800,
+    ease: "power2.out",
+    scrollTrigger: {
+        trigger: ".scrollElement",
+        start: "40% top",
+        end: "50% 100%",
+        scrub: 4,
+        onEnter: function() { gsap.to("#about-left-bird", { scaleX: 1, rotation: 0 }) },
+        onLeave: function() { gsap.to("#about-left-bird", { scaleX: -1, rotation: -15 }) },
+    }
+})
+
+gsap.fromTo("#about-right-bird", { opacity: 1 }, {
+    y: 500,
+    x: -1800,
+    ease: "power2.out",
+    scrollTrigger: {
+        trigger: ".scrollElement",
+        start: "40% top",
+        end: "50% 100%",
+        scrub: 4,
+        onEnter: function() { gsap.to("#about-right-bird", { scaleX: 1, rotation: 0 }) },
+        onLeave: function() { gsap.to("#about-right-bird", { scaleX: -1, rotation: -15 }) },
+    }
+})
+
+gsap.fromTo("#about-cloud-left", { opacity: 1 }, {
+    x: 1000,
+    y: -200,
+    scale: 3,
+    ease: "power2.out",
+    scrollTrigger: {
+        trigger: ".scrollElement",
+        start: "44% top",
+        end: "50% 100%",
+        scrub: 4,
+    }
+})
+
+gsap.fromTo("#about-cloud-right", { opacity: 1 }, {
+    x: -1000,
+    y: 200,
+    scale: 3,
+    ease: "power2.out",
+    scrollTrigger: {
+        trigger: ".scrollElement",
+        start: "44% top",
+        end: "50% 100%",
+        scrub: 4,
+    }
+})
+
+// feature parallax
+
+gsap.fromTo("#feature-camels", { opacity: 1 }, {
+    x: 100,
+    ease: "power2.out",
+    scrollTrigger: {
+        trigger: ".scrollElement",
+        start: "48% top",
+        end: "60% 100%",
+        scrub: 4,
+    }
+})
+
+// roadmap parllax
+
+gsap.fromTo("#roadmap-left-bird", { opacity: 1 }, {
+    y: -800,
+    x: 2000,
+    ease: "power2.out",
+    scrollTrigger: {
+        trigger: ".scrollElement",
+        start: "63% top",
+        end: "78% 100%",
+        scrub: 4,
+        onEnter: function() { gsap.to("#roadmap-left-bird", { scaleX: 1, rotation: 0 }) },
+        onLeave: function() { gsap.to("#roadmap-left-bird", { scaleX: -1, rotation: -15 }) },
+    }
+})
+
+gsap.fromTo("#roadmap-right-bird", { opacity: 1 }, {
+    y: 800,
+    x: -2000,
+    ease: "power2.out",
+    scrollTrigger: {
+        trigger: ".scrollElement",
+        start: "55% top",
+        end: "70% 100%",
+        scrub: 4,
+        onEnter: function() { gsap.to("#roadmap-right-bird", { scaleX: 1, rotation: 0 }) },
+        onLeave: function() { gsap.to("#roadmap-right-bird", { scaleX: -1, rotation: -15 }) },
+    }
+})
+
+gsap.fromTo("#roadmap-cloud-left", { opacity: 1 }, {
+    x: 1000,
+    y: -200,
+    scale: 2,
+    ease: "power2.out",
+    scrollTrigger: {
+        trigger: ".scrollElement",
+        start: "65% top",
+        end: "85% 100%",
+        scrub: 4,
+    }
+})
+
+gsap.fromTo("#roadmap-cloud-right", { opacity: 1 }, {
+    x: -1000,
+    y: 200,
+    scale: 2,
+    ease: "power2.out",
+    scrollTrigger: {
+        trigger: ".scrollElement",
+        start: "57% top",
+        end: "78% 100%",
+        scrub: 4,
+    }
+})
+
+// benefits parallax
+
+gsap.fromTo("#benefits-camels", { opacity: 1 }, {
+    x: -100,
+    ease: "power2.out",
+    scrollTrigger: {
+        trigger: ".scrollElement",
+        start: "69% top",
+        end: "90% 100%",
+        scrub: 4,
+    }
+})
+
 
 
 
